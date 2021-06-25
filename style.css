@@ -201,6 +201,7 @@ h5 {
 .instagram-text {
 
     line-height: 1.3em;
+    padding-top:15px;
 }
 
 .instagram {
@@ -214,4 +215,9 @@ h5 {
 
 .form_submit {
     width:50%;    
+}
+
+.card-title {
+    font-family: Inter;
+    
 }
