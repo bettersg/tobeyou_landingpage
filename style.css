@@ -254,7 +254,7 @@ color: #000A11;
 
 
 .header-logo {
-  top: -70px; left: -15px; position: relative; height:300px
+  top: -70px; left: -15px; position: relative; height:300px !important;
   
 }
 @media (max-width:480px) {
