@@ -128,7 +128,7 @@
                             <p class="instagram-text midnight-dark2">Volleyball practice is tiring, but it&apos;s nowhere near as exhausting as the rest of my life! Sometimes I wonder if everybody has so much drama in their life, or if it&apos;s just me. I want to be a doctor, a good daughter, a reliable friend, and I&apos;m also trying to figure out my faith - and given that I go to a co-ed secular school, that can get pretty tricky some times. Especially if I end up liking someone who won&apos;t &quot;pass the parent test&quot; because he&apos;s Christian and Chinese. But that&apos;s life as Nadia. And this is what it&apos;s like, to be me.<br> <span class="instagram-hashtag">#ToBeNadia #TooMuchDrama</span></p>
                         </div>                         
                         <div class="card-action"> 
-                            <a href="#" class="aqua1 modal-trigger ">SIGN UP FOR EARLY ACCESS</a> 
+                            <a href="#modal1" class="aqua1 modal-trigger ">SIGN UP FOR EARLY ACCESS</a> 
                         </div>                         
                     </div>
                     <div class="card instagram" style="
@@ -156,7 +156,7 @@
                             <p class="instagram-text midnight-dark2">What do you think about this headshot? Been trying different looks out to see what would work for my casting portfolio. I guess breaking into the acting and modelling world was never going to be easy, but I didn&apos;t realise it would be <span><i style="">so</i></span> hard because of who I am. And there&apos;s so much pressure on me to change how I look, just to have an easier life in NS, or to finally get a casting call back... but I don&apos;t know if that&apos;s the right thing for me to do. I&apos;m lucky my Selinder hearts me for who I am, but life&apos;s pretty tough as Aman. I guess this is what it&apos;s like, to be me.<br><span class="instagram-hashtag">#ToBeAman #PunjabiSikhModel</span></p>
                         </div>
                         <div class="card-action"> 
-                            <a href="#" class="aqua1 modal-trigger ">SIGN UP FOR EARLY ACCESS</a> 
+                            <a href="#modal1" class="aqua1 modal-trigger ">SIGN UP FOR EARLY ACCESS</a> 
                         </div>                         
                     </div>
                 </div>
@@ -393,26 +393,26 @@
                     <div class="row" style="margin-bottom:0px"> 
                         <div class="col input-field m6 s12"> 
                             <input type="text" name="fullname" id="fullname">
-                            <label for="name">Full Name</label>                             
+                            <label for="name">Full Name*</label>                             
                         </div>                         
                         <div class="col input-field m6 s12"> 
                             <input id="email" name="email" type="text"> 
-                            <label for="email">Email Address</label>                             
+                            <label for="email">Email Address*</label>                             
                         </div>                         
                     </div>                     
                     <div class="row"> 
                         <div class="col input-field s12"> 
                             <input name="org" id="org" type="text"> 
-                            <label for="organisation">Organisation / School</label>                             
+                            <label for="organisation">Organisation / School (optional)</label>                             
                         </div>
                         <div class="col input-field s12"> 
                             <textarea name="comments" id="comments" class="materialize-textarea"></textarea> 
-                            <label for="comments">Comments</label>                             
+                            <label for="comments">Comments (optional)</label>                             
                         </div>                         
                     </div>                     
                 </div>
                 <div class="modal-footer"> 
-                    <button class="form_submit btn waves-effect waves-light blue" type="submit" name="submit">Submit
+                    <button class="form_submit btn waves-effect waves-light blue" type="submit" name="submit" onClick="$('.modal').modal('close');">Submit
                         <i class="material-icons right">send</i>
                     </button>
                 </div>
