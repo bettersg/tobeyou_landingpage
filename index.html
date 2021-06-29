@@ -80,10 +80,43 @@
             document.body.appendChild(css);
         };
         </script>
+
+
+        <script>
+            // Set the date we're counting down to
+        var countDownDate = new Date("Jul 21, 2021 09:00:00").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the result in the element with id="demo"
+            document.getElementById("timer").innerHTML = days + "days " + hours + "hr "
+                + minutes + "min " + seconds + "sec ";
+
+                // If the count down is finished, write some text
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("timer").innerHTML = "JUST LAUNCHED!";
+                }
+        }, 1000);
+        </script>
     </head>
     <body>
         <div id="index-banner" class="header" data-paroller-factor="-0.4" data-paroller-type="background" data-paroller-direction="vertical">
             <div class="section">
+                <p class="countdown ">Going live in: <span id="timer" ></span></p>
                 <img src="assets/img/logo.png" class="responsive-img header-logo"/>
                 <div class="container" style="margin-bottom: 150px;">
                     <div class="center row">
@@ -237,7 +270,7 @@
                                 <li>Diandrea Ho</li>
                                 <li>Germaine Lee</li>
                                 <li>Goh Si Hui</li>
-                                <li>Lillian Lee</li>
+                                <li>Lilian Lee</li>
                                 <li>May Chiang</li>
                                 <li>Nikko Lopez Jarata</li>
                                 <li>Peng You Yun</li>
@@ -259,10 +292,10 @@
                             <div class="divider red"></div>
                             <h3>&nbsp;Research &amp; Content Team</h3>
                             <ul class="instagram-text ">
-                                <li>
+                                <li  style="color:red">
                                     <b>Chief Editor:</b> Gayle Goh 
                                 </li>
-                                <li>
+                                <li  style="color:red">
                                     <b>Research Lead:</b> Sim Weiheng
                                 </li>
                                 <li>
@@ -278,7 +311,7 @@
                             <div class="divider red"></div>
                             <h3>Growth &amp; Impact Team</h3>
                             <ul class="instagram-text ">
-                                <li>
+                                <li  style="color:red">
                                     <b>Team Lead:</b> Aaqib Kufran
                                 </li>
                                 <li>
