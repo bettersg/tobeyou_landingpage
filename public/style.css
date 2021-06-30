@@ -333,3 +333,21 @@ color: #000A11;
   text-orientation: mixed;
   color: white;
 }
+
+
+.team-text {
+  line-height: 1.3em;
+  padding-top: 15px;
+  color: var(--midnight-dark2);
+}
+
+.team-text a {
+  color: var(--midnight-dark1);
+  text-decoration: underline  grey;
+
+}
+
+.team-text b {
+  font-weight: bold;
+  color: var(--aqua1);
+}
