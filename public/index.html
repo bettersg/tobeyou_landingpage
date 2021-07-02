@@ -358,7 +358,7 @@
                                         <li>Praval Visvanath</li>
                                         <li>Sarah Mak</li>
                                         <li>Shivram Gopinath</li>
-                                        <li>Tysha Khan</li>
+                                        <li>tysha khan</li>
                                         <li>Ummi Tasfia</li>
                                         <li>Valen Lim</li>
                                     </ul>                                     
@@ -435,7 +435,9 @@
         <!-- Modal Trigger -->
         <!-- Modal Structure -->
         <div id="modal1" class="modal bottom-sheet">
-            <form name="submit-to-google-sheet">
+            <div class="typeform-widget" data-url="https://form.typeform.com/to/UnNtHibn?typeform-medium=embed-snippet&typeform-welcome=0" data-hide-headers="true" data-hide-footer="true" style="width: 100%; height: 350px;"></div> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm", b="https://embed.typeform.com/"; if(!gi.call(d,id)) { js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
+            
+            <!-- <form name="submit-to-google-sheet">
                 <div class="modal-content" style="padding-bottom:0px; padding-top:10px"> 
                     <h5 class="center-align">CONNECT WITH US!</h5> 
                     <div class="row" style="margin-bottom:0px"> 
@@ -464,7 +466,7 @@
                         <i class="material-icons right">send</i>
                     </button>
                 </div>
-            </form>
+            </form> -->
         </div>
         <!--  Scripts-->
         <script src="assets/js/jquery.min.js"></script>
@@ -486,16 +488,16 @@
     })
    
         
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbzwRpmq1SWlgDZj5yC09N12Z7Usqu2-EaKRhU7IVgkK35mxVoe1lSE5MXgAvxkune8/exec'
-    const form = document.forms['submit-to-google-sheet']
+    // const scriptURL = 'https://script.google.com/macros/s/AKfycbzwRpmq1SWlgDZj5yC09N12Z7Usqu2-EaKRhU7IVgkK35mxVoe1lSE5MXgAvxkune8/exec'
+    // const form = document.forms['submit-to-google-sheet']
 
-    form.addEventListener('submit', e => {
-        e.preventDefault()
-        console.log(form)
-        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => document.getElementById("submission").innerHTML = 'Success! Thanks for participating' )
-        .catch(error => document.getElementById("submission").innerHTML = 'Something went wrong. Please contact us at limzikun@better.sg if you still cannot submit' +  error.message)
-    })
+    // form.addEventListener('submit', e => {
+    //     e.preventDefault()
+    //     console.log(form)
+    //     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    //     .then(response => document.getElementById("submission").innerHTML = 'Success! Thanks for participating' )
+    //     .catch(error => document.getElementById("submission").innerHTML = 'Something went wrong. Please contact us at limzikun@better.sg if you still cannot submit' +  error.message)
+    // })
 
   </script>
     </body>
