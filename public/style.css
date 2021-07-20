@@ -14,45 +14,46 @@
   box-sizing: border-box;
 }
 
+
 body {
   font-family: Inter;
 }
+
 
 p {
   font-family: Inter;
 }
 
+
 .aqua1 {
   color: var(--aqua1) !important;
 }
+
 
 .midnight-dark2 {
   color: var(--midnight-dark2) !important;
 }
 
+
 .tangerine_bg {
   background: var(--tangerine) !important;
 }
+
 
 .chicky-bg {
   background: var(--chicky) !important;
 }
 
+
 .lemongrass {
   color: var(--lemongrass) !important;
-
 }
 
-
-.header {
-  background-image: url('assets/img/section1_bg.png');
-  background-repeat: repeat;
-  min-height: 95vh;
-}
 
 .screenshots_bg {
   background: #CFEC5A;
 }
+
 
 .slanted_1 {
   background-image: url('assets/img/section2_bg.png');
@@ -62,6 +63,7 @@ p {
   z-index: 1;
   padding: 100px 0;
 }
+
 
 .slanted_1:before,
 .slanted_1:after {
@@ -76,6 +78,7 @@ p {
   transform: skewY(-3deg);
 }
 
+
 .slanted_2 {
   background-repeat: repeat;
   position: relative;
@@ -83,6 +86,7 @@ p {
   z-index: 1;
   padding: 100px 0;
 }
+
 
 .slanted_2:before,
 .slanted_2:after {
@@ -96,6 +100,7 @@ p {
   transform-origin: left top;
   transform: skewY(4deg);
 }
+
 
 .slanted_2:after {
   bottom: 0;
@@ -111,6 +116,7 @@ p {
   z-index: 1;
   padding: 100px 0;
 }
+
 
 .slanted_3:after {
   content: '';
@@ -145,12 +151,14 @@ p {
   color: #FFFFFF;
 }
 
+
 .container-snap-parent {
   /* position: relative */
   /* height: 100vh */
   /* overflow: auto */
   scroll-snap-type: y proximity;
 }
+
 
 .container-snap {
   display: flex;
@@ -160,15 +168,18 @@ p {
   scroll-snap-align: start;
 }
 
+
 .fullheight {
   min-height: 90vh;
 }
+
 
 .footer {
   /* footer */
   /* midnight/dark1 */
   background: var(--midnight-dark1);
 }
+
 
 h1 {
   font-family: Staatliches;
@@ -178,6 +189,7 @@ h1 {
   line-height: 90%;
 }
 
+
 h2 {
   font-family: Staatliches;
   font-size: 4em;
@@ -185,6 +197,7 @@ h2 {
   color: #072435;
   line-height: 90%;
 }
+
 
 h3 {
   font-family: Staatliches;
@@ -194,6 +207,7 @@ h3 {
   line-height: 90%;
 }
 
+
 h4 {
   font-family: Staatliches;
   font-size: 2em;
@@ -201,6 +215,7 @@ h4 {
   color: #072435;
   line-height: 90%;
 }
+
 
 h5 {
   font-family: Staatliches;
@@ -210,9 +225,11 @@ h5 {
   line-height: 90%;
 }
 
+
 .divider {
   height: 3px;
 }
+
 
 .instagram-text {
   line-height: 1.3em;
@@ -220,24 +237,29 @@ h5 {
   color: var(--midnight-dark2);
 }
 
+
 .instagram {
   max-width: 480px;
   margin-bottom: 100px;
   margin-top: 100px;
 }
 
+
 .instagram-hashtag {
-  color:#4F4DBE;
+  color: #4F4DBE;
 }
+
 
 .input-field {
   margin-top: 0.1rem;
   margin-bottom: 0.3rem;
 }
 
+
 .form_submit {
   width: 50%;
 }
+
 
 .card-title {
   font-family: Inter;
@@ -245,15 +267,18 @@ h5 {
   font-weight: 700 !important;
 }
 
+
 .insta-profile-image {
   border: 1px solid #bdbdbd;
   vertical-align: top;
 }
 
+
 .card-action {
   display: flex;
   justify-content: space-between;
 }
+
 
 .card-action {
   background-color: inherit;
@@ -261,6 +286,7 @@ h5 {
   border-top: 0px !important;
   vertical-align: top !important;
 }
+
 
 .bolded {
   font-weight: 700;
@@ -276,22 +302,22 @@ h5 {
 }
 
 .p1-key-body {
-font-family: Inter;
-font-style: normal;
-font-weight: normal;
-font-size: 24px;
-line-height: 160%;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 160%;
 
-/* midnight/dark2 */
-color: #000A11;
+  /* midnight/dark2 */
+  color: #000A11;
 }
 
 
 @media (max-width:480px) {
   .p1-key-body {
     font-size: 20px;
-  line-height: 160%;
-  margin-top: 10px;
+    line-height: 160%;
+    margin-top: 10px;
   }
 }
 
@@ -299,31 +325,76 @@ color: #000A11;
   font-size: 20px;
 }
 
-.header-logo {
-  top: -70px; left: -15px; position: relative; height:300px !important;
-  
+
+.section {
+  position: relative;
 }
+
+
+.header {
+  background-image: url('assets/img/section1_bg.png');
+  background-repeat: repeat ;
+  background-position: left top;
+  min-height: 95vh;
+  position: relative;
+}
+
+
+.header-logo {
+  top: -70px;
+  left: -15px;
+  position: relative;
+  height: 300px !important;
+}
+
+
 @media (max-width:480px) {
-  .header-logo{
+  .header-logo {
     height: 180px !important;
-    top: -70px;left:0px;
+    top: -70px;
+    left: 0px;
   }
+}
+
+.header-bottom-right {
+  float: right;
+}
+
+
+@media (max-width:480px) {
+  .header-bottom-right {
+    position: static;
+  }
+  .header-characters {
+    margin-top: -100px !important;
+    margin-bottom: -50px !important;
+
+    /* float: right */
+    width: 100% !important;
+  }
+}
+
+.header-characters {
+  margin-top: -300px;
+  width: 50%;
+  float: right;
 }
 
 
 .card-content {
-  padding-bottom:16px !important;
+  padding-bottom: 16px !important;
 }
-
 
 
 .indicator-item {
   background-color: rgba(0,0,0,0.8) !important;
 }
 
+
 .indicator-item.active {
-  background-color: rgba(255,255,255,0.5) !important
+  background-color: rgba(255,255,255,0.5) !important;
 }
+
 
 .countdown {
   position: absolute;
@@ -341,11 +412,12 @@ color: #000A11;
   color: var(--midnight-dark2);
 }
 
+
 .team-text a {
   color: var(--midnight-dark1);
   text-decoration: underline  grey;
-
 }
+
 
 .team-text b {
   font-weight: bold;

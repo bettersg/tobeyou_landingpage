@@ -80,8 +80,6 @@
             document.body.appendChild(css);
         };
         </script>
-
-
         <script>
             // Set the date we're counting down to
         var countDownDate = new Date("Jul 21, 2021 09:00:00").getTime();
@@ -112,7 +110,6 @@
                 }
         }, 1000);
         </script>
-
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-6C8ELYHGWW"></script>
         <script>
@@ -122,14 +119,13 @@
 
             gtag('config', 'G-6C8ELYHGWW');
         </script>
-
     </head>
-    <body>
-        <div id="index-banner" class="header" data-paroller-factor="-0.4" data-paroller-type="background" data-paroller-direction="vertical">
-            <div class="section">
-                <p class="countdown ">Going live in: <span id="timer" ></span></p>
+    <body> 
+        <div id="index-banner" class="header" data-paroller-factor="-0.4" data-paroller-type="background" data-paroller-direction="vertical"> 
+            <div class="section" style="overflow: hidden;">
+                <p class="countdown ">Going live in: <span id="timer"></span></p>
                 <img src="assets/img/logo.png" class="responsive-img header-logo"/>
-                <div class="container" style="margin-bottom: 150px;">
+                <div class="container" style="margin-bottom: 150px;z-index:10; position:relative;">
                     <div class="center row">
                         <h1 class="left-align" style="    margin-top: -30px; margin-bottom: 10px ">What&apos;s it like <br class="hide-on-med-and-up show-on-small"> to be  <span class="typewrite" data-period="2000" data-type='[ "Nadia?", "Aman?", "You?", "Me?" ]'> <span class="wrap"></span> </span></h1>
                         <div class="col l6 left-align m6 s12" style="padding-left:0px !important;">
@@ -140,9 +136,10 @@
                         </div>
                     </div>
                 </div>
+                <img src="assets/img/header_characters.png" class="header-characters"/> 
             </div>
         </div>
-        <div class="">
+        <div>
             <div class="slanted_1 container-snap" id="section_characters" data-pg-name="section1" data-paroller-factor="0.5" data-paroller-type="background" data-paroller-direction="vertical">
                 <div class="section">
                     <!--   Icon Section   -->
@@ -207,20 +204,16 @@
             </div>
             <div class="container-snap screenshots_bg" id="section_screenshots" data-pg-name="Screenshots" style="padding-bottom:100px">
                 <div class="section" style="margin-top: 100px">
-                    
                     <h2 class="center-align " style="text-transform: uppercase;">screenshots</h2>
                     <div class="row container">
                         <div class="col l4 m4 "> 
                             <img src="assets/img/screenshot1.png" class="responsive-img  z-depth-2"/>
-                          
                         </div>
                         <div class="col l4 m4 "> 
                             <img src="assets/img/screenshot3.png" class="responsive-img  z-depth-2"/>
-                           
                         </div>
                         <div class="col l4 m4 "> 
                             <img src="assets/img/screenshot2.png" class="responsive-img  z-depth-2"/>
-                           
                         </div>
                     </div>
                 </div>
@@ -232,9 +225,8 @@
                         <h1 class="white-text">About the Project</h1>
                         <div class="col l8 m8 s12 p-body-20" style="padding-left:0px"> 
                             <p class="midnight-dark2">What if you were born as somebody else? What if your race, gender, and other "identities" were something else? Would you still be able to go through life as you have? Would it be easier? Harder? What challenges and opportunities would you have that are different? What would it be like to not be you? </p> 
-                            <p class="midnight-dark2">These are hard questions. But questions we must ask ourselves, so we can be better.
-                                </p>
-                                <p class="midnight-dark2">We are building an interactive fiction game that gets to the heart of empathy. But instead of asking people to &quot;walk a mile&quot; in others’ shoes, we are giving you a chance to be them — to <b>play as a character with their identity</b> in our game. </p>
+                            <p class="midnight-dark2">These are hard questions. But questions we must ask ourselves, so we can be better. </p>
+                            <p class="midnight-dark2">We are building an interactive fiction game that gets to the heart of empathy. But instead of asking people to &quot;walk a mile&quot; in others’ shoes, we are giving you a chance to be them — to <b>play as a character with their identity</b> in our game. </p>
                             <p class="midnight-dark2"><b>To Be You</b> was conceived to help dismantle stereotypes and reduce prejudice, and ultimately foster greater empathy and inclusiveness among Singaporeans. This idea won the top prize at the 2020 MCCY:Mission Unite Hackathon. </p>
                             <p class="midnight-dark2">This is a project by the non-profit volunteer-run techforgood community, <a href="https://better.sg" class="white-text">better.sg</a>. At better.sg, we brainstorm, build, and supercharge techforgood digital tools to address societal issues.</p>
                             <div class="center-align hide-on-med-and-up show-on-small">
@@ -273,7 +265,6 @@
                         </div>
                     </div>
                     <div class="row" style="margin-bottom: 200px; margin-top: 50px;">
-                        
                         <div class="center-align col equal-height-card l4 m6 s12">
                             <div class="divider red"></div>
                             <h3>Tech / Dev Team</h3>
@@ -288,21 +279,24 @@
                         </div>
                         <div class="center-align col equal-height-card l4 m6 s12">
                             <div class="divider red"></div>
-                            <h3>&nbsp;Research &amp; Content Team</h3>
+                            <h3>Research &amp; Content Team</h3>
                             <ul class="team-text ">
-                                <li  style="color:red">
+                                <li style="color:red">
                                     <b>Chief Editor:</b> Gayle Goh 
                                 </li>
-                                <li  style="color:red">
+                                <li style="color:red">
                                     <b>Research Lead:</b> Sim Weiheng
                                 </li>
                                 <li>
-                                    <b>Research Advisor:</b> <a href="https://lkyspp.nus.edu.sg/ips/about-us/staff-directory/kalpana-vignehsa">Dr Kalpana Vignehsa</a>
+                                    <b>Research Advisor:</b> 
+                                    <a href="https://www.linkedin.com/in/kalpanavignehsa/">Dr Kalpana Vignehsa</a>
                                 </li>
+                                <li><a href="https://www.linkedin.com/in/sidcode">Siddhant Shrivastava</a></li>
                                 <li>
-                                    Tasleem Banu
+                                    Tasleem Banu</li>
+                                <li>
+                                    <a href="https://sg.linkedin.com/in/lewis-liu-61408463">Lewis Liu</a>
                                 </li>
-                                <li><a href="https://sg.linkedin.com/in/lewis-liu-61408463">Lewis Liu</a></li>
                             </ul>
                         </div>
                         <div class="center-align col equal-height-card l4 m6 s12">
@@ -312,30 +306,30 @@
                                 <li>Amy Whip</li>
                                 <li>Ariel Ang</li>
                                 <li>Axelle Cheng</li>
-                                <li>Desiree Khng</li>                                 
+                                <li><a href="https://www.linkedin.com/in/desiree-khng-314343194">Desiree Khng</a>  </li>                                 
                                 <li>Diandrea Ho</li>
                                 <li>Germaine Lee</li>
                                 <li>Goh Si Hui</li>
                                 <li>Lilian Lee</li>
-                                <li>May Chiang</li>
-                                <li>Nikko Lopez Jarata</li>
+                                <li><a href="https://linkedin.com/in/maychiang">May Chiang</a></li>
+                                <li>Nikko Jarata Lopez</li>
                                 <li>Peng You Yun</li>
                             </ul>
                         </div>
                         <div class="center-align col equal-height-card l4 m6 s12">
                             <div class="divider red"></div>
-                            <h3>Growth &amp; Impact Team</h3>
+                            <h3>Growth & Impact Team</h3>
                             <ul class="team-text ">
-                                <li  style="color:red">
+                                <li style="color:red">
                                     <b>Team Lead:</b> Aaqib Kufran
                                 </li>
                                 <li>
                                     Andhika Agung Pratama
-                                </li>
+</li>
                                 <li>Clara Tang</li>
                                 <li>Jasmine Ong</li>
-                                <li>Ramakrishnan Karthigayan</li>
-                                <li>Siddhant Shrivastava</li>
+                                <li>Ramakrishnan Karthigayan</li>    
+                                <li>Sherylyn Tan</li>    
                                 <li>Wei Yi Tan</li>
                             </ul>
                         </div>
@@ -373,10 +367,13 @@
                                             <b>Illustrators:</b> 
                                         </li>
                                         <li>Isabella Tong</li>
+                                        <li>Chloe Chan</li>
                                         <li>
                                             <b>Soundtrack:</b> 
                                         </li>
-                                        <li><a href="https://open.spotify.com/artist/2c6BxHCmJmJXTkIGQL7pzF?si=p83oXHenTee1Ys-VbNqQxA&dl_branch=1">Darren Sng</a></li>
+                                        <li>
+                                            <a href="https://open.spotify.com/artist/2c6BxHCmJmJXTkIGQL7pzF?si=p83oXHenTee1Ys-VbNqQxA&dl_branch=1">Darren Sng</a>
+                                        </li>
                                         <li>
                                             <b>Dev support by OneXTech:</b> 
                                         </li>
@@ -385,7 +382,7 @@
                                         <li>
                                             <b>Public Relations by Tate Anzur:</b> 
                                         </li>
-                                        <li>Tengku Mariam</li>                                         
+                                        <li>Tengku Mariam & team </li>                                         
                                     </ul>                                     
                                 </div>
                             </div>
@@ -402,7 +399,7 @@
                 <div class="container section">
                     <!--   Icon Section   -->
                     <div class="row" style="margin-top: 200px;">
-                        <h1 class="center-align">get early access</h1>
+                        <h1 class="center-align">join us from 21<sup>st</sup> july</h1>
                     </div>
                     <div class="row">
                         <div class="col l6 m6 s12"> 
@@ -423,13 +420,17 @@
         <footer class="page-footer" style="background: var(--midnight-dark2);">
             <div class="container">
                 <p class="white-text" align="center">
-                    Add to the conversation after we launch on 21st July with #ToBeYou on <br> <a href="tobeyou@better.sg">Email</a> | <a href="https://instagram.com/tobeyou.sg">Instagram</a> | <a href="https://t.me/ToBeYouSG">Telegram</a> | <a href="https://www.reddit.com/u/ToBeYouSG">Reddit</a> </p>
+                    Add to the conversation after we launch on 21st July with #ToBeYou on <br> <a href="tobeyou@better.sg">Email</a> | <a href="https://instagram.com/tobeyou.sg">Instagram</a> | <a href="https://t.me/ToBeYouSG">Telegram</a> | <a href="https://www.facebook.com/ToBeYou.SG">Facebook</a> </p>
             </div>
             <div class="footer-copyright">
                 <div class="center-align container">
                     A non-profit volunteer-run project by 
-                    <a class="red-text text-lighten-2" href="https://better.sg">better.sg</a>. <br> 
-                    For any queries, please email us at <a href="mailto:ToBeYou@better.sg">ToBeYou@better.sg</a> <br> 
+                    <a class="red-text text-lighten-2" href="https://better.sg">better.sg</a>. 
+                    <br> 
+                    For any queries, please email us at 
+
+                    <a href="mailto:ToBeYou@better.sg">ToBeYou@better.sg</a> 
+                    <br> 
                     <small><a href="privacypolicy.html">[ Privacy Policy ]</a></small>
                 </div>
             </div>
@@ -437,8 +438,9 @@
         <!-- Modal Trigger -->
         <!-- Modal Structure -->
         <div id="modal1" class="modal bottom-sheet">
-            <div class="typeform-widget" data-url="https://form.typeform.com/to/UnNtHibn?typeform-medium=embed-snippet&typeform-welcome=0" data-hide-headers="true" data-hide-footer="true" style="width: 100%; height: 350px;"></div> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm", b="https://embed.typeform.com/"; if(!gi.call(d,id)) { js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
-            
+            <div class="typeform-widget" data-url="https://form.typeform.com/to/UnNtHibn?typeform-medium=embed-snippet&typeform-welcome=0" data-hide-headers="true" data-hide-footer="true" style="width: 100%; height: 350px;"></div>             
+
+            <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm", b="https://embed.typeform.com/"; if(!gi.call(d,id)) { js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
             <!-- <form name="submit-to-google-sheet">
                 <div class="modal-content" style="padding-bottom:0px; padding-top:10px"> 
                     <h5 class="center-align">CONNECT WITH US!</h5> 
