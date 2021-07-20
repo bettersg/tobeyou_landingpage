@@ -362,16 +362,16 @@ h5 {
 }
 
 
-
 .header-characters {
   /* margin-top: -300px */
-  width: 50%;
+  width: 60%;
   float: right;
 }
 
+
 .header-container {
-  margin-bottom: -50px !important; 
-  z-index: 10; 
+  margin-bottom: -50px !important;
+  z-index: 10;
   position: relative;
 }
 
@@ -388,7 +388,7 @@ h5 {
     width: 100% !important;
   }
   .header-container {
-    margin-bottom: 100px !important; 
+    margin-bottom: 100px !important;
   }
 }
 
