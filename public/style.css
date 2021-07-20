@@ -335,7 +335,8 @@ h5 {
   background-image: url('assets/img/section1_bg.png');
   background-repeat: repeat ;
   background-position: left top;
-  min-height: 95vh;
+
+  /* min-height: 95vh */
   position: relative;
 }
 
@@ -361,7 +362,21 @@ h5 {
 }
 
 
-@media (max-width:480px) {
+
+.header-characters {
+  /* margin-top: -300px */
+  width: 50%;
+  float: right;
+}
+
+.header-container {
+  margin-bottom: -50px !important; 
+  z-index: 10; 
+  position: relative;
+}
+
+
+@media (max-width:550px) {
   .header-bottom-right {
     position: static;
   }
@@ -372,14 +387,10 @@ h5 {
     /* float: right */
     width: 100% !important;
   }
+  .header-container {
+    margin-bottom: 100px !important; 
+  }
 }
-
-.header-characters {
-  margin-top: -300px;
-  width: 50%;
-  float: right;
-}
-
 
 .card-content {
   padding-bottom: 16px !important;
