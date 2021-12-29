@@ -10,24 +10,13 @@
 }
 
 .about .fixed-elements {
-  align-items: flex-start;
-  display: flex;
   flex-direction: column;
-  left: 0;
-  min-height: 5839px;
-  position: fixed;
-  top: 0;
   width: 100%;
-  z-index: 11;
-  pointer-events: none;
 
 }
 
 .about .social-media-icons {
   height: 36px;
-  left: 48px;
-  position: absolute;
-  bottom: 20px;
   display: flex;
   flex-direction: row;
   align-items: flex-end;
@@ -59,8 +48,6 @@
 .facebook {
   height: 36px;
   left: 0;
-  bottom: 20px;
-  display: flex;
   justify-content: space-between;
   margin: 10px;
 
@@ -68,8 +55,6 @@
 
 .instagram {
   height: 36px;
-  left: 36px;
-  bottom: 20px;
   display: flex;
   justify-content: space-between;
   margin: 10px;
@@ -78,8 +63,6 @@
 
 .reddit {
   height: 36px;
-  left: 72px;
-  bottom: 20px;
   display: flex;
   justify-content: space-between;
   margin: 10px;
@@ -88,8 +71,6 @@
 
 .telegram {
   height: 36px;
-  left: 108px;
-  bottom: 20px;
   display: flex;
   justify-content: space-between;
   margin: 10px;
@@ -251,6 +232,7 @@
 
 .about .about:hover {
   transform: scale(1.1);
+  color: #000000;
 
 }
 
@@ -304,13 +286,14 @@
 
 }
 
-.about .white-border {
+.white-border {
   border: 16px solid var(--white);
   height: 100vh;
   left: 0;
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
+  z-index: 1000000;
 
 }
 
@@ -360,7 +343,7 @@
 }
 
 .about .text-about-the-project {
-  width: 50%;
+  width: 70%;
   opacity: 0;
   transform: translate(0, 25px);
 
@@ -460,18 +443,18 @@
 .about .button-play-now-6 {
   background-color: var(--moody-blue);
   align-items: flex-start;
-  color: #FFFFFF;
+  color: #FFFFFF !important;
   border-radius: 80px;
   cursor: pointer;
-  display: flex;
 
+  /* display: flex */
   /* height: 64px */
   justify-content: center;
-  margin-left: 32px;
-  min-width: 252px;
   padding: 10.7px 38px;
   transition: all 0.2s ease;
   margin-top: 80px;
+  margin-left: auto;
+  margin-right: auto;
 
 }
 
