@@ -2583,7 +2583,7 @@ transform: translate(0,0);
 
 .home-1440-px .overlap-group-10 {
   align-items: center;
-  background-image: url(../img/pattern-print.png);
+  background: url(../img/pattern-print.png) repeat;
   /* background-size: 100% 100%; */
   display: flex;
   justify-content: center;
@@ -3101,7 +3101,7 @@ transform: scale(1);
   width: 310px;
   align-self: center;
   flex-direction: column;
-  margin-top: 40%;
+  margin-top: 30%;
   opacity: 0;
   transform: scale(0.9);
 }
@@ -4756,6 +4756,7 @@ transform: translate(0,0);
   height: 906px; 
   margin-left: -654px;
   position: relative;
+  background-image: url(../img/pattern-print.png);
 }
 
 
@@ -4845,7 +4846,7 @@ transform: translate(0,0);
 }
 
 .home-375-px .bgrd-print {
-  height: 906px;
+  height: 100%;
   left: 0;
   position: absolute;
   top: 0;
