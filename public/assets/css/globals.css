@@ -5,13 +5,13 @@
   font-family: "Adapter PE Display-Black";
   font-style: normal;
   font-weight: 900;
-  src: url("../fonts/AdapterPEDisplay-Bl.otf") format("opentype");
+  src: url("../fonts/AdapterPEDisplay-Bl.woff2");
 }
 @font-face {
   font-family: "SF Pro Text-Regular";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/SF-Pro-Text-Regular.otf") format("opentype");
+  src: url("../fonts/SF-Pro-Text-Regular.woff2");
 }
 
 .screen a {
