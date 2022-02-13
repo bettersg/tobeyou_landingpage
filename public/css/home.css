@@ -2926,9 +2926,7 @@
 
 
 
-
 /* screen - home-375-px */
-
 .home-375-px {
   align-items: flex-start;
   background-color: var(--white);
@@ -2965,6 +2963,7 @@
   transform: scale(0);
   width: 100%;
 }
+
 .home-375-px .bkgrd-aqua-1::before {
   top: -10%;
   background: url(../img/print_tile.png);
@@ -2985,14 +2984,15 @@
 }
 
 @keyframes bp3-animate-enter19-frames {
-  from{opacity: 1;
-transform: scale(1);
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
-to{opacity: 1;
-transform: scale(1);
-}
-}
-
 
 .home-375-px .hero-375 {
   align-items: flex-start;
@@ -3001,10 +3001,8 @@ transform: scale(1);
   min-height: 100vh;
   left: 0;
   overflow: hidden;
- 
   width: 100%;
 }
-
 
 .home-375-px .iconmenu {
   height: 32px;
@@ -3033,12 +3031,14 @@ transform: scale(1);
 }
 
 @keyframes bp3-animate-enter21-frames {
-  from{opacity: 0;
-transform: scale(0.9);
-}
-to{opacity: 1;
-transform: scale(1);
-}
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .home-375-px .overlap-group-13 {
@@ -3069,8 +3069,6 @@ transform: scale(1);
   width: 26px;
 }
 
-
-
 .home-375-px .text-2-1 {
   color: var(--blue-stone);
   font-family: var(--font-family-inter);
@@ -3096,15 +3094,15 @@ transform: scale(1);
 }
 
 @keyframes bp3-animate-enter23-frames {
-  from{opacity: 0;
-transform: scale(0.9);
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
-to{opacity: 1;
-transform: scale(1);
-}
-}
-
-
 
 .home-375-px .text-1-1 {
   color: var(--white);
@@ -3130,17 +3128,15 @@ transform: scale(1);
 }
 
 @keyframes bp3-animate-enter20-frames {
-  from{opacity: 0;
-transform: translate(0, -25px);
+  from {
+    opacity: 0;
+    transform: translate(0, -25px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
 }
-to{opacity: 1;
-transform: translate(0, 0);
-}
-}
-
-
-
-
 
 .home-375-px .overlap-group7 {
   height: 100vh;
@@ -3169,12 +3165,14 @@ transform: translate(0, 0);
 }
 
 @keyframes bp3-animate-enter22-frames {
-  from{opacity: 0;
-transform: translate(0, 25px);
-}
-to{opacity: 1;
-transform: translate(0, 0);
-}
+  from {
+    opacity: 0;
+    transform: translate(0, 25px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
 }
 
 .home-375-px .overlap-group1-4 {
@@ -3183,7 +3181,6 @@ transform: translate(0, 0);
   align-items: center;
   justify-content: flex-end;
 }
-
 
 .home-375-px .button-play-now-9 {
   background-color: var(--white);
@@ -3210,12 +3207,14 @@ transform: translate(0, 0);
 }
 
 @keyframes bp3-animate-enter24-frames {
-  from{opacity: 0;
-transform: translate(0, 25px);
-}
-to{opacity: 1;
-transform: translate(0,0);
-}
+  from {
+    opacity: 0;
+    transform: translate(0, 25px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0,0);
+  }
 }
 
 .home-375-px .button-play-now-9:hover {
@@ -3282,7 +3281,6 @@ transform: translate(0,0);
   bottom: 0;
 }
 
-
 .home-375-px .side-characters-4.bp3-animate-enter10 {
   animation: bp3-animate-enter10-frames 1.00s ease-in-out 1.00s 1 normal forwards;
   opacity: 0;
@@ -3290,19 +3288,21 @@ transform: translate(0,0);
 }
 
 @keyframes bp3-animate-enter10-frames {
-  from{opacity: 0;
-transform: scale(0.9);
-}
-to{opacity: 1;
-transform: scale(1);
-}
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .home-375-px .overlap-group-14 {
   height: 470px;
   position: relative;
   bottom: -40px;
-  overflow:hidden;
+  overflow: hidden;
 }
 
 .home-375-px .gavin-1 {
@@ -3367,12 +3367,14 @@ transform: scale(1);
 }
 
 @keyframes bp3-animate-enter11-frames {
-  from{opacity: 0;
-transform: scale(0.9);
-}
-to{opacity: 1;
-transform: scale(1);
-}
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .home-375-px .text-6 {
@@ -3388,7 +3390,6 @@ transform: scale(1);
   flex-direction: column;
 }
 
-
 .home-375-px .text-6.bp3-animate-enter12 {
   animation: bp3-animate-enter12-frames 1.00s ease-in-out 1.00s 1 normal forwards;
   opacity: 0;
@@ -3396,12 +3397,14 @@ transform: scale(1);
 }
 
 @keyframes bp3-animate-enter12-frames {
-  from{opacity: 0;
-transform: scale(0.9);
-}
-to{opacity: 1;
-transform: scale(1);
-}
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .home-375-px .an-award-winning-7 {
@@ -3430,21 +3433,21 @@ transform: scale(1);
 
 .home-375-px .button-play-now-10 {
   background-color: var(--white);
-    border-radius: 80px;
-    box-shadow: 0px 4px 24px #005b6966;
-    cursor: pointer;
-    height: 64px;
-    left: 20%;
-    /* display: flex; */
-    right: 0;
-    margin: auto;
-    opacity: 0;
-    position: absolute;
-    /* top: 561px; */
-    transform: translate(0, 25px);
-    transition: all 0.2s ease;
-    width: 174px;
-    bottom: 40px;
+  border-radius: 80px;
+  box-shadow: 0px 4px 24px #005b6966;
+  cursor: pointer;
+  height: 64px;
+  left: 20%;
+  /* display: flex; */
+  right: 0;
+  margin: auto;
+  opacity: 0;
+  position: absolute;
+  /* top: 561px; */
+  transform: translate(0, 25px);
+  transition: all 0.2s ease;
+  width: 174px;
+  bottom: 40px;
 }
 
 .home-375-px .button-play-now-10.bp3-animate-enter13 {
@@ -3454,14 +3457,15 @@ transform: scale(1);
 }
 
 @keyframes bp3-animate-enter13-frames {
-  from{opacity: 0;
-transform: translate(0, 25px);
+  from {
+    opacity: 0;
+    transform: translate(0, 25px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0,0);
+  }
 }
-to{opacity: 1;
-transform: translate(0,0);
-}
-}
-
 
 .home-375-px .experience-life {
   background-color: var(--governor-bay);
@@ -3471,7 +3475,6 @@ transform: translate(0,0);
   align-items: center;
   width: 100%;
 }
-
 
 .home-375-px .text-7 {
   height: 328px;
@@ -3488,12 +3491,14 @@ transform: translate(0,0);
 }
 
 @keyframes bp3-animate-enter26-frames {
-  from{opacity: 0;
-transform: translate(0, 25px);
-}
-to{opacity: 1;
-transform: translate(0,0);
-}
+  from {
+    opacity: 0;
+    transform: translate(0, 25px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0,0);
+  }
 }
 
 .home-375-px .experience-life-text {
@@ -3501,7 +3506,6 @@ transform: translate(0,0);
   display: flex;
   flex-direction: column;
   min-height: 315px;
-
 }
 
 .home-375-px .an-award-winning-9 {
@@ -3547,19 +3551,17 @@ transform: translate(0,0);
 }
 
 @keyframes bp3-animate-enter27-frames {
-  from{opacity: 0;
-transform: translate(0, 25px);
+  from {
+    opacity: 0;
+    transform: translate(0, 25px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0,0);
+  }
 }
-to{opacity: 1;
-transform: translate(0,0);
-}
-}
 
-
-
-/*SLIDER*/
-
-
+/* SLIDER */
 .swiper-slide {
   flex-shrink: 0;
   width: 100%;
@@ -3570,8 +3572,6 @@ transform: translate(0,0);
   align-items: center;
 }
 
-
-
 .swiper-wrapper {
   min-height: 480px;
   max-width: 230px;
@@ -3579,16 +3579,12 @@ transform: translate(0,0);
   align-self: center;
 }
 
-
-
 .swiper-container {
   top: 40px;
   left: 0;
   right: 0;
   margin: auto;
 }
-
-
 
 .chapters-img-01 {
   height: 380px;
@@ -3604,14 +3600,12 @@ transform: translate(0,0);
   margin-top: 20px;
 }
 
-
 .chapters-img-03 {
   height: 380px;
   object-fit: cover;
   top: 20px;
   margin-top: 20px;
 }
-
 
 .chapters-img-04 {
   height: 380px;
@@ -3620,14 +3614,12 @@ transform: translate(0,0);
   margin-top: 20px;
 }
 
-
 .chapters-img-05 {
   height: 380px;
   object-fit: cover;
   top: 20px;
   margin-top: 20px;
 }
-
 
 .swiper-pagination {
   margin-bottom: 40px;
@@ -3647,14 +3639,14 @@ transform: translate(0,0);
   opacity: 0.4 !important;
 }
 
-
 .swiper-pagination-bullet-active {
   background-color: #c4e739 !important;
   opacity: 1;
 }
 
 
-/*mobile-screens*/
+
+/* mobile-screens */
 
 /* .home-375-px .mobile-screens {
   height: 520px;
@@ -3680,8 +3672,8 @@ transform: translate(50px, 0);
 to{opacity: 1;
 transform: translate(0,0);
 }
-}
- */
+} */
+
 /* .home-375-px .bgnadiacanteen-afternoon-1 {
   height: 380px;
   object-fit: cover;
@@ -3708,7 +3700,6 @@ transform: translate(0,0);
   top: 20px;
   left: 120px;
 } */
-
 .home-375-px .stories-4 {
   letter-spacing: 5.76px;
   line-height: 76.8px;
@@ -3729,12 +3720,14 @@ transform: translate(0,0);
 }
 
 @keyframes bp3-animate-enter40-frames {
-  from{opacity: 0;
-transform: scale(0.9);
-}
-to{opacity: 1;
-transform: scale(1);
-}
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .home-375-px .stories-aman-375-px {
@@ -3768,7 +3761,6 @@ transform: scale(1);
   margin-top: 40px;
 }
 
-
 .home-375-px .stories-5.bp3-animate-enter14 {
   animation: bp3-animate-enter14-frames 1.00s ease-in-out 0.00s 1 normal forwards;
   opacity: 0;
@@ -3776,12 +3768,14 @@ transform: scale(1);
 }
 
 @keyframes bp3-animate-enter14-frames {
-  from{opacity: 0;
-transform: scale(0.9);
-}
-to{opacity: 1;
-transform: scale(1);
-}
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .home-375-px .stories-aman-1 {
@@ -3801,12 +3795,14 @@ transform: scale(1);
 }
 
 @keyframes bp3-animate-enter15-frames {
-  from{opacity: 0;
-transform: scale(0.9);
-}
-to{opacity: 1;
-transform: scale(1);
-}
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .home-375-px .text-8 {
@@ -3849,12 +3845,14 @@ transform: scale(1);
 }
 
 @keyframes bp3-animate-enter16-frames {
-  from{opacity: 0;
-transform: scale(0.9);
-}
-to{opacity: 1;
-transform: scale(1);
-}
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .home-375-px .over-container-2 {
@@ -3939,12 +3937,14 @@ transform: scale(1);
 }
 
 @keyframes bp3-animate-enter17-frames {
-  from{opacity: 0;
-transform: scale(0);
-}
-to{opacity: 1;
-transform: scale(1);
-}
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .home-375-px .button-play-now-12 {
@@ -3969,12 +3969,14 @@ transform: scale(1);
 }
 
 @keyframes bp3-animate-enter18-frames {
-  from{opacity: 0;
-transform: translate(0, 25px);
-}
-to{opacity: 1;
-transform: translate(0,0);
-}
+  from {
+    opacity: 0;
+    transform: translate(0, 25px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0,0);
+  }
 }
 
 .home-375-px .button-play-now-12:hover {
@@ -4020,12 +4022,14 @@ transform: translate(0,0);
 }
 
 @keyframes bp3-animate-enter5-frames {
-  from{opacity: 0;
-transform: scale(0.9);
-}
-to{opacity: 1;
-transform: scale(1);
-}
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .home-375-px .stories-ravi-1 {
@@ -4045,12 +4049,14 @@ transform: scale(1);
 }
 
 @keyframes bp3-animate-enter6-frames {
-  from{opacity: 0;
-transform: scale(0.9)
-}
-to{opacity: 1;
-transform: scale(1);
-}
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .home-375-px .text-5 {
@@ -4106,12 +4112,14 @@ transform: scale(1);
 }
 
 @keyframes bp3-animate-enter7-frames {
-  from{opacity: 0;
-transform: scale(0.9);
-}
-to{opacity: 1;
-transform: scale(1);
-}
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .home-375-px .overlap-group-12 {
@@ -4150,12 +4158,14 @@ transform: scale(1);
 }
 
 @keyframes bp3-animate-enter8-frames {
-  from{opacity: 0;
-transform: scale(0);
-}
-to{opacity: 1;
-transform: scale(1);
-}
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .home-375-px .button-play-now-13 {
@@ -4180,12 +4190,14 @@ transform: scale(1);
 }
 
 @keyframes bp3-animate-enter9-frames {
-  from{opacity: 0;
-transform: translate(0, 25px);
-}
-to{opacity: 1;
-transform: translate(0,0);
-}
+  from {
+    opacity: 0;
+    transform: translate(0, 25px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0,0);
+  }
 }
 
 .home-375-px .button-play-now-13:hover {
@@ -4228,12 +4240,14 @@ transform: translate(0,0);
 }
 
 @keyframes bp3-animate-enter-frames {
-  from{opacity: 0;
-transform: scale(0.9);
-}
-to{opacity: 1;
-transform: scale(1);
-}
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .home-375-px .ravi-20-2 {
@@ -4282,7 +4296,7 @@ transform: scale(1);
   top: 0;
   transform: scale(0.9);
   white-space: nowrap;
-  margin-left:15px;
+  margin-left: 15px;
 }
 
 .home-375-px .stories-7.bp3-animate-enter2 {
@@ -4292,12 +4306,14 @@ transform: scale(1);
 }
 
 @keyframes bp3-animate-enter2-frames {
-  from{opacity: 0;
-transform: scale(0.9);
-}
-to{opacity: 1;
-transform: scale(1);
-}
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .home-375-px .overlap-group1-6 {
@@ -4309,15 +4325,14 @@ transform: scale(1);
 }
 
 .home-375-px .characters-2 {
-     left: 101px;
-     opacity: 0;
-     position: absolute;
-     top: 160px;
-     transform: scale(0.9);
-     width: 513px;
-     bottom: 0;
- }
-
+  left: 101px;
+  opacity: 0;
+  position: absolute;
+  top: 160px;
+  transform: scale(0.9);
+  width: 513px;
+  bottom: 0;
+}
 
 .home-375-px .characters-2.bp3-animate-enter1 {
   animation: bp3-animate-enter1-frames 1.00s ease-in-out 0.25s 1 normal forwards;
@@ -4326,12 +4341,14 @@ transform: scale(1);
 }
 
 @keyframes bp3-animate-enter1-frames {
-  from{opacity: 0;
-transform: scale(0.9);
-}
-to{opacity: 1;
-transform: scale(1);
-}
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .home-375-px .cover-6 {
@@ -4370,12 +4387,14 @@ transform: scale(1);
 }
 
 @keyframes bp3-animate-enter3-frames {
-  from{opacity: 0;
-transform: translate(0, 25px);
-}
-to{opacity: 1;
-transform: translate(0,0);
-}
+  from {
+    opacity: 0;
+    transform: translate(0, 25px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0,0);
+  }
 }
 
 .home-375-px .button-play-now-14:hover {
@@ -4404,12 +4423,14 @@ transform: translate(0,0);
 }
 
 @keyframes bp3-animate-enter4-frames {
-  from{opacity: 0;
-transform: scale(0);
-}
-to{opacity: 1;
-transform: scale(1);
-}
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .home-375-px .overlap-group13 {
@@ -4442,15 +4463,15 @@ transform: scale(1);
 }
 
 @keyframes bp3-animate-enter28-frames {
-  from{opacity: 0;
-transform: translate(0, 25px);
+  from {
+    opacity: 0;
+    transform: translate(0, 25px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0,0);
+  }
 }
-to{opacity: 1;
-transform: translate(0,0);
-}
-}
-
-
 
 .home-375-px .what-people-say-text-1 {
   align-items: center;
@@ -4459,7 +4480,6 @@ transform: translate(0,0);
   margin-top: 40px;
   opacity: 0;
   transform: translate(0, 25px);
-
 }
 
 .home-375-px .what-people-say-text-1.bp3-animate-enter31 {
@@ -4469,12 +4489,14 @@ transform: translate(0,0);
 }
 
 @keyframes bp3-animate-enter31-frames {
-  from{opacity: 0;
-transform: translate(0, 25px);
-}
-to{opacity: 1;
-transform: translate(0,0);
-}
+  from {
+    opacity: 0;
+    transform: translate(0, 25px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0,0);
+  }
 }
 
 .home-375-px .what-players-say-3 {
@@ -4500,12 +4522,14 @@ transform: translate(0,0);
 }
 
 @keyframes bp3-animate-enter29-frames {
-  from{opacity: 0;
-transform: translate(0, 25px);
-}
-to{opacity: 1;
-transform: translate(0,0);
-}
+  from {
+    opacity: 0;
+    transform: translate(0, 25px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0,0);
+  }
 }
 
 .home-375-px .text-3-1 {
@@ -4526,12 +4550,14 @@ transform: translate(0,0);
 }
 
 @keyframes bp3-animate-enter30-frames {
-  from{opacity: 0;
-transform: translate(0, 25px);
-}
-to{opacity: 1;
-transform: translate(0,0);
-}
+  from {
+    opacity: 0;
+    transform: translate(0, 25px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0,0);
+  }
 }
 
 .home-375-px .overlap-group9 {
@@ -4558,16 +4584,13 @@ transform: translate(0,0);
   width: 615.5px;
 }
 
-
 .home-375-px .profile-6-1 {
   align-items: center;
   display: flex;
   flex-direction: column;
   height: 71px;
   margin-top: 2px;
-  
 }
-
 
 .home-375-px .profile-6-2 {
   align-items: center;
@@ -4585,9 +4608,8 @@ transform: translate(0,0);
   max-width: 101px;
   margin-top: 20px;
   transform: rotate(8.05deg);
-  
-  
 }
+
 .home-375-px .profile-6-4 {
   align-items: center;
   display: flex;
@@ -4597,7 +4619,6 @@ transform: translate(0,0);
   margin-bottom: -20px;
 }
 
-
 .home-375-px .overlap-group-17 {
   height: 81px;
   margin-left: -5px;
@@ -4606,8 +4627,6 @@ transform: translate(0,0);
   width: 80px;
 }
 
-
-
 .home-375-px .text-4-1 {
   letter-spacing: 0;
   line-height: 22.4px;
@@ -4615,6 +4634,7 @@ transform: translate(0,0);
   transform: rotate(-0.03deg);
   width: 287px;
 }
+
 .home-375-px .text-4-2 {
   letter-spacing: 0;
   line-height: 22.4px;
@@ -4622,6 +4642,7 @@ transform: translate(0,0);
   transform: rotate(-0.03deg);
   width: 287px;
 }
+
 .home-375-px .text-4-3 {
   letter-spacing: 0;
   line-height: 22.4px;
@@ -4630,6 +4651,7 @@ transform: translate(0,0);
   width: 287px;
   margin-bottom: -20px;
 }
+
 .home-375-px .text-4-4 {
   letter-spacing: 0;
   line-height: 22.4px;
@@ -4653,14 +4675,15 @@ transform: translate(0,0);
 }
 
 @keyframes bp3-animate-enter65-frames {
-  from{opacity: 0;
-transform: translate(0, 25px);
+  from {
+    opacity: 0;
+    transform: translate(0, 25px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0,0);
+  }
 }
-to{opacity: 1;
-transform: translate(0,0);
-}
-}
-
 
 .home-375-px .profile-1-2 {
   display: flex;
@@ -4677,12 +4700,14 @@ transform: translate(0,0);
 }
 
 @keyframes bp3-animate-enter66-frames {
-  from{opacity: 0;
-transform: translate(0, 25px);
-}
-to{opacity: 1;
-transform: translate(0,0);
-}
+  from {
+    opacity: 0;
+    transform: translate(0, 25px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0,0);
+  }
 }
 
 .home-375-px .profile-1-3 {
@@ -4694,7 +4719,6 @@ transform: translate(0,0);
   margin-top: 60px;
 }
 
-
 .profile-1-3.bp3-animate-enter67 {
   animation: bp3-animate-enter67-frames 0.25s ease-in-out 1.40s 1 normal forwards;
   opacity: 0;
@@ -4702,12 +4726,14 @@ transform: translate(0,0);
 }
 
 @keyframes bp3-animate-enter67-frames {
-  from{opacity: 0;
-transform: translate(0, 25px);
-}
-to{opacity: 1;
-transform: translate(0,0);
-}
+  from {
+    opacity: 0;
+    transform: translate(0, 25px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0,0);
+  }
 }
 
 .home-375-px .profile-1-4 {
@@ -4726,12 +4752,14 @@ transform: translate(0,0);
 }
 
 @keyframes bp3-animate-enter68-frames {
-  from{opacity: 0;
-transform: translate(0, 25px);
-}
-to{opacity: 1;
-transform: translate(0,0);
-}
+  from {
+    opacity: 0;
+    transform: translate(0, 25px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0,0);
+  }
 }
 
 .home-375-px .overlap-group8 {
@@ -4759,12 +4787,14 @@ transform: translate(0,0);
 }
 
 @keyframes bp3-animate-enter32-frames {
-  from{opacity: 0;
-transform: translate(0, 25px);
-}
-to{opacity: 1;
-transform: translate(0,0);
-}
+  from {
+    opacity: 0;
+    transform: translate(0, 25px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0,0);
+  }
 }
 
 .home-375-px .media-features-2 {
@@ -4889,15 +4919,12 @@ transform: translate(0,0);
   min-height: 100vh;
   min-width: 100%;
   flex-direction: column;
- 
 }
 
 .home-375-px .overlap-group10 {
- 
   margin-left: -654px;
   position: relative;
 }
-
 
 .home-375-px .get-in-touch-icon-1 {
   display: block;
@@ -4920,12 +4947,14 @@ transform: translate(0,0);
 }
 
 @keyframes bp3-animate-enter33-frames {
-  from{opacity: 0;
-transform: translate(0, 25px);
-}
-to{opacity: 1;
-transform: translate(0,0);
-}
+  from {
+    opacity: 0;
+    transform: translate(0, 25px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0,0);
+  }
 }
 
 .home-375-px .text-get-in-touch {
@@ -4946,12 +4975,14 @@ transform: translate(0,0);
 }
 
 @keyframes bp3-animate-enter34-frames {
-  from{opacity: 0;
-transform: translate(0, 25px);
-}
-to{opacity: 1;
-transform: translate(0,0);
-}
+  from {
+    opacity: 0;
+    transform: translate(0, 25px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0,0);
+  }
 }
 
 .home-375-px .text-8-1 {
@@ -5010,14 +5041,15 @@ transform: translate(0,0);
 }
 
 @keyframes bp3-animate-enter35-frames {
-  from{opacity: 0;
-transform: translate(0, 25px);
+  from {
+    opacity: 0;
+    transform: translate(0, 25px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0,0);
+  }
 }
-to{opacity: 1;
-transform: translate(0,0);
-}
-}
-
 
 .home-375-px .play-now-4 {
   height: 43px;
@@ -5051,14 +5083,15 @@ transform: translate(0,0);
 }
 
 @keyframes bp3-animate-enter36-frames {
-  from{opacity: 0;
-transform: translate(0, 25px);
+  from {
+    opacity: 0;
+    transform: translate(0, 25px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0,0);
+  }
 }
-to{opacity: 1;
-transform: translate(0,0);
-}
-}
-
 
 .home-375-px .about-1 {
   align-items: center;
@@ -5089,12 +5122,14 @@ transform: translate(0,0);
 }
 
 @keyframes bp3-animate-enter37-frames {
-  from{opacity: 0;
-transform: translate(0, 25px);
-}
-to{opacity: 1;
-transform: translate(0,0);
-}
+  from {
+    opacity: 0;
+    transform: translate(0, 25px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0,0);
+  }
 }
 
 .home-375-px .about-the-project-1 {
@@ -5119,15 +5154,15 @@ transform: translate(0,0);
 }
 
 @keyframes bp3-animate-enter40-frames {
-  from{opacity: 0;
-transform: translate(0, 25px);
+  from {
+    opacity: 0;
+    transform: translate(0, 25px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0,0);
+  }
 }
-to{opacity: 1;
-transform: translate(0,0);
-}
-}
-
-
 
 .home-375-px .text-10 {
   color: var(--bunting);
@@ -5143,8 +5178,6 @@ transform: translate(0,0);
   width: 290px;
 }
 
-
-
 .home-375-px .text-10.bp3-animate-enter41 {
   animation: bp3-animate-enter41-frames 0.25s ease-in-out 0.50s 1 normal forwards;
   display: block;
@@ -5153,15 +5186,15 @@ transform: translate(0,0);
 }
 
 @keyframes bp3-animate-enter41-frames {
-  from{opacity: 0;
-transform: translate(0, 25px);
+  from {
+    opacity: 0;
+    transform: translate(0, 25px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0,0);
+  }
 }
-to{opacity: 1;
-transform: translate(0,0);
-}
-}
-
-
 
 .home-375-px .button-play-now-17 {
   background-color: var(--moody-blue);
@@ -5183,12 +5216,14 @@ transform: translate(0,0);
 }
 
 @keyframes bp3-animate-enter38-frames {
-  from{opacity: 0;
-transform: translate(0, 25px);
-}
-to{opacity: 1;
-transform: translate(0,0);
-}
+  from {
+    opacity: 0;
+    transform: translate(0, 25px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0,0);
+  }
 }
 
 .home-375-px .what-people-say-gradient-1 {
@@ -5209,7 +5244,6 @@ transform: translate(0,0);
   padding: 30px 19px;
   width: 100%;
   z-index: 7;
-    
 }
 
 .home-375-px .to-top-icon-1 {
@@ -5244,12 +5278,14 @@ transform: translate(0,0);
 }
 
 @keyframes bp3-animate-enter39-frames {
-  from{opacity: 0;
-transform: scale(0.9);
-}
-to{opacity: 1;
-transform: scale(1);
-}
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .home-375-px .overlap-group-21 {
@@ -5329,6 +5365,7 @@ transform: scale(1);
   white-space: nowrap;
   width: 63px;
 }
+
 
 
 /* screen - home-768-px */
@@ -7108,9 +7145,8 @@ transform: scale(1);
 }
 
 .home-768-px .what-people-say-icon-2 {
-    opacity: 0;
-    transform: translate(0, 25px);
-  
+  opacity: 0;
+  transform: translate(0, 25px);
 }
 
 .home-768-px .what-people-say-icon-2.bp2-animate-enter39 {
@@ -7300,7 +7336,6 @@ transform: scale(1);
   }
 }
 
-
 .home-768-px .profile-10 {
   align-items: flex-start;
   display: flex;
@@ -7318,7 +7353,6 @@ transform: scale(1);
   position: relative;
   width: 124px;
 }
-
 
 .home-768-px .vector-10 {
   height: 115px;
@@ -7363,9 +7397,6 @@ transform: scale(1);
     transform: translate(0,0);
   }
 }
-
-
-
 
 .home-768-px .text-18-1 {
   height: 73.3px;
@@ -7430,8 +7461,6 @@ transform: scale(1);
   }
 }
 
-
-
 .home-768-px .profile-12 {
   align-items: flex-start;
   display: flex;
@@ -7447,8 +7476,6 @@ transform: scale(1);
   position: relative;
   width: 125px;
 }
-
-
 
 .home-768-px .vector-12 {
   height: 114px;
@@ -7475,7 +7502,6 @@ transform: scale(1);
   margin-left: 64.2px;
   width: 349.52px;
 }
-
 
 .home-768-px .profile-4-3.bp2-animate-enter53 {
   animation: bp2-animate-enter53-frames 0.25s ease-in-out 1.70s 1 normal forwards;
@@ -7520,8 +7546,6 @@ transform: scale(1);
   position: relative;
   width: 117px;
 }
-
-
 
 .home-768-px .vector-13 {
   height: 113px;
