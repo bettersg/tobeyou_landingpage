@@ -1,500 +1,1126 @@
 <!DOCTYPE html>
-<html lang="en" style="font-family: Inter;">
+<html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <title>To Be You</title>
-        <!-- CSS  -->
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link href="materialize/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-        <link href="parallax-template.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Staatliches&display=swap">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter&display=swap">
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+        <link rel="shortcut icon" type="image/png" href="img/favicon-96x96.png"/>
         <meta property="og:url" content="https://tobeyou.sg/"/>
-        <meta property="og:title" content="To Be You: A Singaporean Interactive Fiction Game"/>
-        <meta property="og:description" content="Experience what life is like for someone else. What choices would you make, if you were them?"/>
-        <meta property="og:image" content="/assets/img/shared_characters.jpg"/> 
-        <link href="style.css" rel="stylesheet" type="text/css">
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-        <link rel="icon" href="favicon.ico" type="image/x-icon">
-        <link rel="apple-touch-icon" sizes="144x144" href="/assets/img/apple-icon-144x144.png">
-        <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/android-icon-192x192.png">
-        <link rel="icon" type="image/png" sizes="96x96" href="/assets/img/favicon-96x96.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
-        <script>
-             
-        var TxtType = function(el, toRotate, period) {
-            this.toRotate = toRotate;
-            this.el = el;
-            this.loopNum = 0;
-            this.period = parseInt(period, 10) || 2000;
-            this.txt = '';
-            this.tick();
-            this.isDeleting = false;
-        };
-
-        TxtType.prototype.tick = function() {
-            var i = this.loopNum % this.toRotate.length;
-            var fullTxt = this.toRotate[i];
-
-            if (this.isDeleting) {
-            this.txt = fullTxt.substring(0, this.txt.length - 1);
-            } else {
-            this.txt = fullTxt.substring(0, this.txt.length + 1);
-            }
-
-            this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
-
-            var that = this;
-            var delta = 200 - Math.random() * 100;
-
-            if (this.isDeleting) { delta /= 2; }
-
-            if (!this.isDeleting && this.txt === fullTxt) {
-            delta = this.period;
-            this.isDeleting = true;
-            } else if (this.isDeleting && this.txt === '') {
-            this.isDeleting = false;
-            this.loopNum++;
-            delta = 500;
-            }
-
-            setTimeout(function() {
-            that.tick();
-            }, delta);
-        };
-
-        window.onload = function() {
-            var elements = document.getElementsByClassName('typewrite');
-            for (var i=0; i<elements.length; i++) {
-                var toRotate = elements[i].getAttribute('data-type');
-                var period = elements[i].getAttribute('data-period');
-                if (toRotate) {
-                new TxtType(elements[i], JSON.parse(toRotate), period);
-                }
-            }
-            // INJECT CSS
-            var css = document.createElement("style");
-            css.type = "text/css";
-            css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
-            document.body.appendChild(css);
-        };
-        </script>
-        
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-6C8ELYHGWW"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-6C8ELYHGWW');
-        </script>
+        <meta property="og:title" content="ToBeYou: A Singaporean Interactive Fiction Game"/>
+        <meta property="og:description" content="An award-winning game about empathy"/>
+        <link rel="stylesheet" type="text/css" href="css/home.css"/>
+        <link rel="stylesheet" type="text/css" href="css/styleguide.css"/>
+        <link rel="stylesheet" type="text/css" href="css/globals.css"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <link href="swiper/swiper-bundle.min.css" rel="stylesheet"/>
     </head>
-    <body> 
-        <div id="index-banner" class="header" data-paroller-factor="-0.4" data-paroller-type="background" data-paroller-direction="vertical"> 
-            <div class="section" style="overflow: hidden;">
-                <p class="countdown ">Nadia Chapter 2 now available!</p>
-                <img src="assets/img/logo.png" class="responsive-img header-logo"/>
-                <div class="container header-container">
-                    <div class="center row">
-                        <h1 class="left-align" style="    margin-top: -30px; margin-bottom: 10px ">What&apos;s it like <br class="hide-on-med-and-up show-on-small"> to be  <span class="typewrite" data-period="2000" data-type='[ "Nadia?", "Aman?", "You?", "Me?" ]'> <span class="wrap"></span> </span></h1>
-                        <div class="col l8 left-align m8 s12" style="padding-left:0px !important;">
-                            <p class="p1-key-body">An award-winning Singaporean interactive fiction game that lets you experience life as someone else. What choices would you make, if you were them?</p>
-                            <!-- Change your lens to the world, and you'll change the world -->
-                            <!-- Singapore&rsquo;s first interactive fiction game that challenges how we see race, religion, and background in others &mdash; and ourselves.</p> -->
-                            <a href="https://game.tobeyou.sg" id="play-button" class="modal-trigger btn-large waves-effect waves-light" style="margin-top: 20px; margin-bottom: 20px;">Play the game now!</a> 
-                        </div>
+    <body style="margin: 0; background: #ffffff">
+        <!-- <input type="hidden" id="anPageName" name="page" value="home-768-px" /> -->
+        <div class="container-center-horizontal">
+            <div class="home-375-px screen">
+                <div class="overlap-group11">
+                    <div class="overlap-group6-1">
+                        <div class="bkgrd-aqua-1 bp3-animate-enter19"></div>                         
                     </div>
-                </div>
-                <img src="assets/img/header_characters.png" class="header-characters"/> 
-            </div>
-        </div>
-        <div>
-            <div class="slanted_1 container-snap" id="section_characters" data-pg-name="section1" data-paroller-factor="0.5" data-paroller-type="background" data-paroller-direction="vertical">
-                <div class="section">
-                    <!--   Icon Section   -->
-                    <h3 class="center-align white-text lemongrass" style="text-transform: uppercase; ">Characters in Early Access</h3>
-                    <div class="card instagram" style="
-                    margin-bottom: 24px;
-                "> 
-                        <div class="card-content white-text"> 
-                            <div style="display: inline;">
-                                <img src="assets/img/nadia_profile.jpg" width="48px" class="circle insta-profile-image left" height="48px" style="border: 1px solid #bdbdbd;"/>
-                                <div style="margin-left: 60px;">
-                                    <span class="card-title midnight-dark2">Nadia Binte Rahim</span>
-                                    <span class="grey-text" style="top: -15px; position: relative;">@nadiarah!m</span>
-                                </div>
-                            </div>
-                            <div class="carousel  carousel-slider">
-                                <a class="carousel-item" href="#one!"><img src="assets/img/nadia_slider1.jpg"></a>
-                                <a class="carousel-item" href="#two!"><img src="assets/img/nadia_slider3.jpg"></a>
+                    <div class="hero-375">
+                        <img class="iconmenu" src="img/icon-menu@2x.png" style="display: none;"/>
+                        <div class="text-1-1 bp3-animate-enter20  ">What’s it like to be you?</div>
+                        <div class="text-2-1 bp3-animate-enter23 ">An award-winning game about empathy</div>                         
+                        <div class="logo-2 bp3-animate-enter21">
+                            <div class="overlap-group-13">
+                                <img class="you-2" src="img/you@2x.png"/>
+                                <img class="bubble-2" src="img/bubble@2x.png"/>
+                                <img class="to-be-2" src="img/to-be@2x.png"/>
                             </div>                             
                         </div>                         
-                        <div class="card-action" style="padding-top: 0px !important;"> 
-                            <a href="https://www.facebook.com/sharer.php?s=100&p[url]=https%3A%2F%2Ftobeyou.sg"><i class="material-icons pink-text">favorite</i></a>
-                            <span>Liked by Gavin and 32 others</span>
-                            <a href="https://www.facebook.com/sharer.php?s=100&p[url]=https%3A%2F%2Ftobeyou.sg" class="aqua1"><i class="material-icons">share</i></a> 
-                        </div>
-                        <div class="card-content" style="padding-top: 0px !important;">
-                            <p class="instagram-text midnight-dark2">Volleyball practice is tiring, but it&apos;s nowhere near as exhausting as the rest of my life! Sometimes I wonder if everybody has so much drama in their life, or if it&apos;s just me. I want to be a doctor, a good daughter, a reliable friend, and I&apos;m also trying to figure out my faith - and given that I go to a co-ed Christian school, that can get pretty tricky some times. Especially if I end up liking someone who won&apos;t &quot;pass the parent test&quot; because he&apos;s Christian and Chinese. But that&apos;s life as Nadia. And this is what it&apos;s like, to be me.<br> <span class="instagram-hashtag">#ToBeNadia #TooMuchDrama</span></p>
-                        </div>                         
-                        <div class="card-action"> 
-                            <i>CHAPTER 1 NOW AVAILABLE. <br />
-                            Decisions you make now will play out in subsequent chapters!</i>
-                        </div>                         
-                    </div>
-                    <div class="card instagram" style="
-                    margin-top: 24px;
-                "> 
-                        <div class="card-content white-text"> 
-                            <div style="display: inline;">
-                                <img src="assets/img/aman_profile.png" width="48px" class="circle insta-profile-image left" height="48px" style="border: 1px solid #bdbdbd;"/>
-                                <div style="margin-left: 60px;">
-                                    <span class="card-title midnight-dark2">Aman Singh</span>
-                                    <span class="grey-text" style="top: -15px; position: relative;">@amanofhisw0rd</span>
+                        <div class="overlap-group7">
+                            <div class="characters bp3-animate-enter22">
+                                <div class="overlap-group1-4">
+                                    <img class="characters bp3-animate-enter22" src="img/characters_hero_mob.png"/>
                                 </div>
                             </div>
-                            <div class="carousel  carousel-slider">
-                                <a class="carousel-item" href="#one!"><img src="assets/img/aman_slider1.jpg"></a>
-                                <a class="carousel-item" href="#two!"><img src="assets/img/aman_slider2.jpg"></a>
-                            </div>                             
-                        </div>                         
-                        <div class="card-action" style="padding-top: 0px !important;"> 
-                            <a href="https://www.facebook.com/sharer.php?s=100&p[url]=https%3A%2F%2Ftobeyou.sg"><i class="material-icons pink-text">favorite</i></a>
-                            <span>Liked by Selinder and 189 others</span>
-                            <a href="https://www.facebook.com/sharer.php?s=100&p[url]=https%3A%2F%2Ftobeyou.sg" class="aqua1"><i class="material-icons">share</i></a> 
-                        </div>
-                        <div class="card-content" style="padding-top: 0px !important;">
-                            <p class="instagram-text midnight-dark2">What do you think about this headshot? Been trying different looks out to see what would work for my casting portfolio. I guess breaking into the acting and modelling world was never going to be easy, but I didn&apos;t realise it would be <span><i style="">so</i></span> hard because of who I am. And there&apos;s so much pressure on me to change how I look, just to have an easier life in NS, or to finally get a casting call back... but I don&apos;t know if that&apos;s the right thing for me to do. I&apos;m lucky my Selinder hearts me for who I am, but life&apos;s pretty tough as Aman. I guess this is what it&apos;s like, to be me.<br><span class="instagram-hashtag">#ToBeAman #PunjabiSikhModel</span></p>
-                        </div>
-                        <div class="card-action"> 
-                            <i>CHAPTER 1 NOW AVAILABLE. <br />
-                            Decisions you make now will play out in subsequent chapters!</i>
-                        </div>                         
-                    </div>
-                </div>
-            </div>
-            <div class="container-snap screenshots_bg" id="section_screenshots" data-pg-name="Screenshots" style="padding-bottom:100px">
-                <div class="section" style="margin-top: 100px">
-                    <h2 class="center-align " style="text-transform: uppercase;">screenshots</h2>
-                    <div class="row container">
-                        <div class="col l4 m4 "> 
-                            <img src="assets/img/screenshot1.png" class="responsive-img  z-depth-2"/>
-                        </div>
-                        <div class="col l4 m4 "> 
-                            <img src="assets/img/screenshot3.png" class="responsive-img  z-depth-2"/>
-                        </div>
-                        <div class="col l4 m4 "> 
-                            <img src="assets/img/screenshot2.png" class="responsive-img  z-depth-2"/>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="section_whoarewe" data-pg-name="who are we" class="tangerine_bg slanted_2">
-                <div class="container fullheight section">
-                    <!--   Icon Section   -->
-                    <div class="row" style="margin-top: 100px;">
-                        <h1 class="white-text">About the Project</h1>
-                        <div class="col l8 m8 s12 p-body-20" style="padding-left:0px"> 
-                            <p class="midnight-dark2">What if you were born as somebody else? What if your race, gender, and other "identities" were something else? Would you still be able to go through life as you have? Would it be easier? Harder? What challenges and opportunities would you have that are different? What would it be like to not be you? </p> 
-                            <p class="midnight-dark2">These are hard questions. But questions we must ask ourselves, so we can be better. </p>
-                            <p class="midnight-dark2">We are building an interactive fiction game that gets to the heart of empathy. But instead of asking people to &quot;walk a mile&quot; in others’ shoes, we are giving you a chance to be them — to <b>play as a character with their identity</b> in our game. </p>
-                            <p class="midnight-dark2"><b>To Be You</b> was conceived to help dismantle stereotypes and reduce prejudice, and ultimately foster greater empathy and inclusiveness among Singaporeans. This idea was one of the winners of the 2020 MCCY:Mission Unite Hackathon. </p>
-                            <p class="midnight-dark2">This is a project by the non-profit volunteer-run techforgood community, <a href="https://better.sg" class="white-text">better.sg</a>. At better.sg, we brainstorm, build, and supercharge techforgood digital tools to address societal issues.</p>
-                            <div class="center-align hide-on-med-and-up show-on-small">
-                                <a href="https://better.sg"><img class="circle responsive-img  z-depth-2" src="assets/img/bettersg.png" width="60%"/></a>                                
-                            </div>                             
-                        </div>
-                        <div class="col hide-on-small-only l3 m3 offset-l1 offset-m1 right-align">
-                            <a href="https://better.sg"><img class="circle  z-depth-2" height="200px" src="assets/img/bettersg.png" style="margin-bottom:36px"/></a>
-                            <img class="circle  z-depth-2" height="200px" src="assets/img/startupx.png"/> 
-                        </div>
-                    </div>
-                    <div class="row" style="padding-bottom: 150px;">
-                        <div class="video-container">
-                            <iframe src="https://www.youtube.com/embed/BaNPkYST-j8" frameborder="0" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="section_theteam" data-pg-name="the team" class="white">
-                <div class="container fullheight section">
-                    <!--   Icon Section   -->
-                    <div class="row" style="margin-top: 200px;">
-                        <h1 class="center-align">The team</h1>
-                        <div class="center-align col l6 m6 s6"> 
-                            <img width="200" class="circle responsive-img" style="max-height:200px" src="assets/img/Gaurav.png">
-                            <h3><a href="https://gauravkeerthi.com" style="color:black">Gaurav Keerthi</a></h3>
-                            <p class="bolded left-align midnight-dark2">Co-lead, Dev Team Lead</p>
-                            <p class="instagram-text left-align">Gaurav is a hobby coder and believes that empathy comes from recognising that everybody has a story, and we should take the time to listen and understand first.</p> 
-                        </div>
-                        <div class="center-align col l6 m6 s6">
-                            <img width="200" class="circle responsive-img" height="200" src="assets/img/Mask%20Group.png">
-                            <h3><a href="http://www.zklim.com/" style="color:black">Zikun <br class="hide-on-med-and-up show-on-small"> Lim</a></h3>
-                            <p class="bolded left-align midnight-dark2">Co-lead, Design Team Lead</p>
-                            <p class="instagram-text left-align">Zikun is a UX/Experience designer focused on creating fun and  impactful experiences across digital and physical mediums. </p>
-                        </div>
-                    </div>
-                    <div class="row" style="margin-bottom: 200px; margin-top: 50px;">
-                        <div class="center-align col equal-height-card l4 m6 s12">
-                            <div class="divider red"></div>
-                            <h3>Dev Team</h3>
-                            <ul class="team-text ">
-                                <li>Ariel Ang</li>
-                                <li>Chng Yong Sheng</li>
-                                <li>Joel Kek</li>              
-                                <li><a href="https://flamboyant-joliot-728271.netlify.app/">Leong Yun Qin Melody</a></li>
-                                <li>Peng You Xuan</li>
-                                <li>Ravern Koh</li>
-                                <li><a href="https://www.linkedin.com/in/qi-yan-seah/">Seah Qi Yan</a></li>
-                                <li>Zhang Yaoxian</li>
-                            </ul>
-                        </div>
-                        <div class="center-align col equal-height-card l4 m6 s12">
-                            <div class="divider red"></div>
-                            <h3>Research &amp; Content Team</h3>
-                            <ul class="team-text ">
-                                <li style="color:red">
-                                    <b>Chief Editor:</b> Gayle Goh 
-                                </li>
-                                <li style="color:red">
-                                    <b>Research Lead:</b> Sim Weiheng
-                                </li>
-                                <li>
-                                    <b>Research Advisor:</b> 
-                                    <a href="https://www.linkedin.com/in/kalpanavignehsa/">Dr Kalpana Vignehsa</a>
-                                </li>
-                                <li>
-                                    <a href="https://www.linkedin.com/in/sidcode">Siddhant Shrivastava</a>
-                                </li>
-                                <li>
-                                    Tasleem Banu
-</li>
-                                <li>
-                                    <a href="https://sg.linkedin.com/in/lewis-liu-61408463">Lewis Liu</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="center-align col equal-height-card l4 m6 s12">
-                            <div class="divider red"></div>
-                            <h3>Design Team</h3>
-                            <ul class="team-text ">
-                                <li>Amy Whip</li>                               
-                                <li>Axelle Cheng</li>
-                                <li>
-                                    <a href="https://www.linkedin.com/in/desiree-khng-314343194">Desiree Khng</a> 
-                                </li>                                 
-                                <li>Diandrea Ho</li>
-                                <li>Germaine Lee</li>
-                                <li>Goh Si Hui</li>
-                                <li>Lilian Lee</li>
-                                <li>
-                                    <a href="https://linkedin.com/in/maychiang">May Chiang</a>
-                                </li>
-                                <li>Nikko Jarata Lopez</li>
-                                <li>Peng You Yun</li>
-                            </ul>
-                        </div>
-                        <div class="center-align col equal-height-card l4 m6 s12">
-                            <div class="divider red"></div>
-                            <h3>Growth & Impact Team</h3>
-                            <ul class="team-text ">
-                                <li style="color:red">
-                                    <b>Team Lead:</b> Aaqib Kufran
-                                </li>
-                                <li>Andhika Agung Pratama</li>
-                                <li>Clara Tang</li>
-                                <li>Jasmine Ong</li>
-                                <li>Ramakrishnan Karthigayan</li>                                 
-                                <li>Sherilyn Tan</li>                                 
-                                <li>Wei Yi Tan</li>
-                            </ul>
-                        </div>
-                        <div class="center-align col equal-height-card l8 m12 s12">
-                            <div class="divider red"></div>
-                            <h3>Partners &amp; Freelancers</h3>
-                            <div class="row">
-                                <div class="col m6 s12"> 
-                                    <ul class="team-text ">
-                                        <li>
-                                            <b>Writing Team from Sing Lit Station:</b> 
-                                        </li>
-                                        <li>Celestia De Roza</li>
-                                        <li>Cheng Him</li>
-                                        <li>Crispin Rodrigues</li>
-                                        <li>Don Shiau</li>
-                                        <li>Izyanti Asa'ari</li>
-                                        <li>Jennifer Anne Champion</li>
-                                        <li>Pamela Seong Koon</li>
-                                        <li>Praval Visvanath</li>
-                                        <li>Sarah Mak</li>
-                                        <li>Shivram Gopinath</li>
-                                        <li>tysha khan</li>
-                                        <li>Ummi Tasfia</li>
-                                        <li>Valen Lim</li>
-                                    </ul>                                     
-                                </div>
-                                <div class="col m6 s12"> 
-                                    <ul class="team-text ">
-                                        <li>
-                                            <b>Freelance Writers:</b> 
-                                        </li>
-                                        <li>Sandeep Singh</li>
-                                        <li>
-                                            <b>Illustrators:</b> 
-                                        </li>
-                                        <li><a href="https://isabellarisselle.wixsite.com/portfolio">Isabella Tong</a></li>
-                                        <li><a href="http://instagram.com/clueyc">Chloe Chan</a></li>
-                                        <li>
-                                            <b>Soundtrack:</b> 
-                                        </li>
-                                        <li>
-                                            <a href="https://open.spotify.com/artist/2c6BxHCmJmJXTkIGQL7pzF?si=p83oXHenTee1Ys-VbNqQxA&dl_branch=1">Darren Sng</a>
-                                        </li>
-                                        <li>
-                                            <b>Dev support by OneXTech:</b> 
-                                        </li>
-                                        <li>Ryan Yeo</li>
-                                        <li>Joel Koh</li>
-                                        <li>
-                                            <b>Public Relations by Tate Anzur:</b> 
-                                        </li>
-                                        <li>Tengku Mariam & team </li>                                         
-                                    </ul>                                     
+                            <div class="button-play-now-9 bp3-animate-enter24">
+                                <div class="play-now-3 valign-text-middle inter-black-bunting-20px">
+                                    <a href="https://game.tobeyou.sg">Play now</a>
                                 </div>
                             </div>
-                            <div style="display: flex; justify-content: space-evenly; align-items: top; vertical-align: top;" class="center-block">
-                                <a href="http://www.singlitstation.com/"><img src="assets/img/singlitstation.png" width="100px" class="circle" height="100px"/></a>
-                                <a href="https://onextech.com.sg"><img src="assets/img/onextech.png" width="65px" class="circle" height="65px" style="margin-top: 5px; margin-left: 17px; margin-right: 17px;"/></a>
-                                <a href="http://tateanzur.com"><img src="assets/img/tateanzur.png" width="65px" class="circle" height="65px" style="margin-top: 5px; margin-left: 17px; margin-right: 17px;"/></a>
-                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div id="section_signup" data-pg-name="signup" class="chicky-bg  slanted_3" style="padding-bottom: 100px;">
-                <div class="container section">
-                    <!--   Icon Section   -->
-                    <div class="row" style="margin-top: 200px;">
-                        <h1 class="center-align">Get in touch with us!</h1>
-                    </div>
-                    <div class="row">
-                        <div class="col l4 m4 s12"> 
-                            <h3>individuals</h3> 
-                            <p>If you care about empathy in Singapore and want to give us feedback, share your own stories, and help make this game spread like wildfire, get in touch with us! We would also love to hear your experiences with diversity so we can consider it for future characters!</p>
-                            <a href="#modal1" class="btn-large waves-effect yellow-text modal-trigger">CONTACT US</a>
-                        </div>
-                        <div class="col l4 m4 s12"> 
-                            <h3>organisations</h3> 
-                            <p>If you are a school or an organisation that thinks this game might be a good way to get your students or staff to have a productive and positive conversation about empathy and cultural differences, reach out to us and get notified when our "facilitated discussion" toolkit is launched.&nbsp;</p>
-                            <a href="#modal1" class="btn-large waves-effect yellow-text modal-trigger">ENQUIRE NOW</a>
-                        </div>
-                        <div class="col l4 m4 s12"> 
-                            <h3>join the team</h3> 
-                            <p>If you would like to be part of volunteer the team behind this project, and you are able to fill these specific roles (covering illustration, UIUX, social media, public relations) in the team, please do join us as a volunteer (and you'll also join the better.sg community!) </p>
-                            <a href="#modal2" class="btn-large waves-effect yellow-text modal-trigger">VOLUNTEER</a>
-                        </div>
-                    </div>
-                    <span class="h5" id="submission"></span>
-                </div>
-            </div>
-        </div>
-        <footer class="page-footer" style="background: var(--midnight-dark2);">
-            <div class="container">
-                <p class="white-text" align="center">
-                    Add to the conversation after we launch on 21st July with #ToBeYou on <br> <a href="https://instagram.com/tobeyou.sg">Instagram</a> | <a href="https://t.me/ToBeYouSG">Telegram</a> | <a href="https://www.facebook.com/ToBeYou.SG">Facebook</a>  | <a href="https://www.reddit.com/r/singapore/comments/ooft34/launching_tobeyousg_a_singaporean_interactive/">Reddit</a> </p>
-            </div>
-            <div class="footer-copyright">
-                <div class="center-align container">
-                    A non-profit volunteer-run project by 
-                    <a class="red-text text-lighten-2" href="https://better.sg">better.sg</a>. 
-                    <br> 
-                    For any queries, please email us at 
-                    <a href="mailto:ToBeYou@better.sg">ToBeYou@better.sg</a> 
-                    <br> 
-                    <small><a href="privacypolicy.html">[ Privacy Policy ]</a> | <a href="help.html">[ Help ]</a></small>
-                </div>
-            </div>
-        </footer>
-        <!-- Modal Trigger -->
-        <!-- Modal Structure -->
-        <div id="modal1" class="modal bottom-sheet">
-            <div class="typeform-widget" data-url="https://form.typeform.com/to/UnNtHibn?typeform-medium=embed-snippet&typeform-welcome=0" data-hide-headers="true" data-hide-footer="true" style="width: 100%; height: 350px;"></div>             
-            <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm", b="https://embed.typeform.com/"; if(!gi.call(d,id)) { js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
-            <!-- <form name="submit-to-google-sheet">
-                <div class="modal-content" style="padding-bottom:0px; padding-top:10px"> 
-                    <h5 class="center-align">CONNECT WITH US!</h5> 
-                    <div class="row" style="margin-bottom:0px"> 
-                        <div class="col input-field m6 s12"> 
-                            <input type="text" name="fullname" id="fullname">
-                            <label for="name">Full Name*</label>                             
-                        </div>                         
-                        <div class="col input-field m6 s12"> 
-                            <input id="email" name="email" type="text"> 
-                            <label for="email">Email Address*</label>                             
-                        </div>                         
-                    </div>                     
-                    <div class="row"> 
-                        <div class="col input-field s12"> 
-                            <input name="org" id="org" type="text"> 
-                            <label for="organisation">Organisation / School (optional)</label>                             
-                        </div>
-                        <div class="col input-field s12"> 
-                            <textarea name="comments" id="comments" class="materialize-textarea"></textarea> 
-                            <label for="comments">Comments (optional)</label>                             
-                        </div>                         
-                    </div>                     
-                </div>
-                <div class="modal-footer"> 
-                    <button class="form_submit btn waves-effect waves-light blue" type="submit" name="submit" onClick="$('.modal').modal('close');">Submit
-                        <i class="material-icons right">send</i>
-                    </button>
-                </div>
-            </form> -->
-        </div>
-        <div id="modal2" class="modal" style="height:80vh">
-            <div class="modal-content">
-                <h4>Volunteer with us</h4>
-                <p>If you would like to join us to support the illustrations, design, game development, growth / impact / outreach, or in any other way, please fill in the form and explain in the comments how you would like to help</p>
-              </div>
-              <div class="modal-footer">
-                <div class="typeform-widget" data-url="https://form.typeform.com/to/UnNtHibn?typeform-medium=embed-snippet&typeform-welcome=0" data-hide-headers="true" data-hide-footer="true" style="width: 100%; height: 350px;"></div>             
-            <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm", b="https://embed.typeform.com/"; if(!gi.call(d,id)) { js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>            
-              </div>
-            
-        </div>
-        <!--  Scripts-->
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="materialize/js/materialize.js"></script>
-        <script src="assets/js/jquery.paroller.js"></script>
-        <script>
-    $(document).ready(function () {          
-        $('.carousel').carousel();
-        $('.modal').modal();
+                <div class="overlap-group12">
+                    <div class="experience-life">
+                        <div class="text-7 bp3-animate-enter26" show-on-scroll>
+                            <div class="experience-life-text">
+                                <div class="an-award-winning-9">Experience life as another Singaporean</div>
+                                <div class="an-award-winning-10 inter-medium-white-20px">
+                                    What if your race, gender, and other &#34;identities&#34; were something else? 
 
-        $('.carousel.carousel-slider').carousel({
-            dist:0,
-            fullWidth: true,
-            indicators: true,
+                                    <br/>What would life
+                                    be like? What challenges and opportunities would you have that are different? 
+
+                                    <br/>To Be You gives
+                                    you a chance to experience it in a safe space.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button-play-now-11 bp3-animate-enter27" show-on-scroll>
+                            <div class="play-now-3 valign-text-middle inter-black-bunting-20px">
+                                <a href="https://game.tobeyou.sg">Play now</a>
+                            </div>
+                        </div>
+                        <div class="characters-carousel swiper-container">
+                            <div class="swiper-wrapper" show-on-scroll>
+                                <div class="character-item swiper-slide">
+                                    <img src="img/bg_nadia_canteen afternoon (1).png" class="chapters-img-01" alt=""/>
+                                </div>
+                                <div class="character-item swiper-slide">
+                                    <img src="img/bg_nadia_playground_mob.png" class="chapters-img-02" alt=""/>
+                                </div>
+                                <div class="character-item swiper-slide">
+                                    <img src="img/Screenshot_mob.png" class="chapters-img-03" alt=""/>
+                                </div>
+                                <div class="character-item swiper-slide">
+                                    <img src="img/bg_aman_bmtcookhouse.png" class="chapters-img-04" alt=""/>
+                                </div>
+                                <div class="character-item swiper-slide">
+                                    <img src="img/bg_aman_mirrorinroom (1).png" class="chapters-img-05" alt=""/>
+                                </div>
+                                <div class="character-item swiper-slide">
+                                    <img src="img/Screenshot_mob.png" class="chapters-img-03" alt=""/>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <!-- <div class="mobile-screens bp3-animate-enter25" show-on-scroll>
+                      <img class="bgnadiacanteen-afternoon-1" src="img/bg_nadia_canteen afternoon (1).png" />
+                      <img class="bgnadiaplayground-1" src="img/bg_nadia_playground_mob.png" />
+                      <img class="screenshot-2021-09-28-at-129-1-1" src="img/Screenshot_mob.png" />
+                    </div> -->
+                    </div>
+                    <!-- <div class="stories-nadia-375-px">
+            <div class="overlap-group4-1">
+              <div class="overlap-group1-5">
+                <div class="bkgrd-2"></div>
+                <div class="stories-4 adapterpedisplay-black-white-96px bp3-animate-enter40" show-on-scroll>STORIES</div>
+                <div class="side-characters-4 bp3-animate-enter10" show-on-scroll>
+                  <div class="overlap-group-14">
+                    <img class="gavin-1" src="img/gavin-1@1x.png" />
+                    <img class="azlinhappy-1-1" src="img/azlin-happy-1-1@1x.png" />
+                    <img class="rahman-1-1" src="img/rahman-1-1@1x.png" />
+                    <img class="chloe-normal-1-1" src="img/chloe-normal-1-1@1x.png" />
+                    <div class="gradient"></div>
+                  </div>
+                </div>
+                <img class="nadia-profile-1 bp3-animate-enter11" show-on-scroll src="img/nadia-profile@2x.png" />
+                <div class="text-6 bp3-animate-enter12" show-on-scroll>
+                  <div class="an-award-winning-7">Nadia, 17</div>
+                  <p class="an-award-winning-8 inter-medium-white-16px">
+                    Nadia binte Rahim wants to survive JC and become a doctor - but will self-doubt and young love get in the way?
+                  </p>
+                </div>
+              </div>
+              <div class="button-play-now-10 bp3-animate-enter13" show-on-scroll>
+                <div class="play-now-3 valign-text-middle inter-black-bunting-20px"><a  href="https://game.tobeyou.sg">Play now</a></div>
+              </div>
+            </div>
+          </div>-->
+                </div>
+                <!-- <div class="stories-aman-375-px">
+          <div class="stories-5 adapterpedisplay-black-white-96px bp3-animate-enter14" show-on-scroll>STORIES</div>
+          <div class="overlap-group5-1">
+            <div class="stories-aman-1 bp3-animate-enter15" show-on-scroll>
+              <div class="text-8">
+                <div class="an-award-winning-11 inter-black-blue-charcoal-34px">Aman, 18</div>
+                <p class="an-award-winning-6 inter-medium-blue-charcoal-16px">
+                  National Service, family expectations, personal dreams, and faith - must Aman Singh give up something he values in order to succeed?
+                </p>
+              </div>
+            </div>
+            <div class="sidecharacters bp3-animate-enter16" show-on-scroll>
+              <div class="over-container-2">
+                <div class="overlap-group-15">
+                  <img class="sergeant-1-1" src="img/sergeant-1-1@1x.png" />
+                  <img class="lukman2-1" src="img/lukman-2@2x.png" />
+                  <img class="jothi2-1-1" src="img/jothi-2-1-1@2x.png" />
+                  <img class="selinder1-1" src="img/selinder-1-1@2x.png" />
+                </div>
+                <div class="cover-4"></div>
+              </div>
+            </div>
+            <img class="amanactive-1 bp3-animate-enter17" show-on-scroll src="img/aman-active@2x.png" />
+            <div class="button-play-now-12 bp3-animate-enter18" show-on-scroll>
+              <div class="play-now-3 valign-text-middle inter-black-bunting-20px"><a  href="https://game.tobeyou.sg">Play now</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="stories-ravi-375-px">
+          <div class="overlap-group3">
+            <div class="stories-6 adapterpedisplay-black-white-96px bp3-animate-enter5" show-on-scroll>STORIES</div>
+            <div class="stories-ravi-1 bp3-animate-enter6" show-on-scroll>
+              <div class="text-5">
+                <div class="ravi-20-1 inter-black-blue-charcoal-34px">Ravi, 25</div>
+                <div class="coming-soon-2">COMING SOON</div>
+                <p class="an-award-winning-6 inter-medium-blue-charcoal-16px">
+                  Ravi Kannaswamy dreams of being an aviation engineer - but can he push past the stereotypes and self-doubts?
+                </p>
+              </div>
+            </div>
+            <div class="characters-1 bp3-animate-enter7" show-on-scroll>
+              <div class="overlap-group-12">
+                <img class="sergeant-1-1" src="img/sergeant-1-1@1x.png" />
+                <img class="lukman2-1" src="img/lukman-2@2x.png" />
+                <img class="jothi2-1-1" src="img/jothi-2-1-2@2x.png" />
+                <img class="selinder1-1" src="img/selinder-1-2@2x.png" />
+              </div>
+            </div>
+            <div class="cover-5"></div>
+            <img class="ravi-pose-02-2 bp3-animate-enter8" show-on-scroll src="img/ravi-pose-02-2@2x.png" />
+            <div class="button-play-now-13 bp3-animate-enter9" show-on-scroll>
+              <div class="play-now-3 valign-text-middle inter-black-bunting-20px"><a  href="https://game.tobeyou.sg">Play now</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="stories-zhihao-375-px">
+          <div class="stories-container">
+            <div class="stories-zhihao-1 bp3-animate-enter" show-on-scroll>
+              <div class="text-5-1">
+                <div class="ravi-20-2">Zhihao, 20</div>
+                <div class="coming-soon-3">COMING SOON</div>
+                <p class="an-award-winning-12">
+                  Zhihao Lim might have a future in e-sports, but will it disappear before his eyes? Life is about to get complicated, as a fateful Tweet gains a life of its own...
+                </p>
+              </div>
+            </div>
+            <div class="stories-7 adapterpedisplay-black-white-96px bp3-animate-enter2" show-on-scroll>STORIES</div>
+          </div>
+          <div class="overlap-group1-6">
+            <div class="characters-2 bp3-animate-enter1">
+              <div class="overlap-group-12">
+                <img class="sergeant-1-1" src="img/sergeant-1-1@1x.png" />
+                <img class="lukman2-1" src="img/lukman-2@2x.png" />
+                <img class="jothi2-1-1" src="img/jothi-2-1-1@2x.png" />
+                <img class="selinder1-1" src="img/selinder-1-1@2x.png" />
+              </div>
+            </div>
+            <div class="cover-6"></div>
+            <div class="button-play-now-14 bp3-animate-enter3" show-on-scroll>
+              <div class="play-now-3 valign-text-middle inter-black-bunting-20px"><a  href="https://game.tobeyou.sg">Play now</a></div>
+            </div>
+            <img class="zhihao-2 bp3-animate-enter4" src="img/zhihao@2x.png" />
+          </div>
+        </div> -->
+                <div class="what-players-say-2">
+                    <div class="what-people-say-icon-1 bp3-animate-enter28" show-on-scroll>
+                        <!-- <div class="overlap-group-16"> -->
+                        <img class="what-people-say-icon-1" src="img/icon-review-smile.gif"/>
+                        <!-- </div> -->
+                    </div>
+                    <div class="what-people-say-text-1 bp3-animate-enter31" show-on-scroll>
+                        <div class="what-players-say-3 bp3-animate-enter29" show-on-scroll>What players say</div>
+                        <p class="text-3-1 inter-medium-white-16px bp3-animate-enter30" show-on-scroll>
+              Since the release on Racial Harmony Day in 2021, the game has received thousands of authentic player reflections: </p>
+                    </div>
+                    <div class="overlap-group9">
+                        <div class="bgrd">
+                            <img class="soft-spotlight-1" src="img/soft-spotlight@2x.png"/>
+                        </div>
+                        <div class="profile-1-1 bp3-animate-enter65" show-on-scroll>
+                            <img class="profile-6-1" src="img/profile-1.png"/>
+                            <div class="profile-6-1">
+</div>
+                            <p class="text-4-1 inter-medium-soap-16px">
+                “I like that i can read Nadia&#39;s thoughts in the game, really puts me in her shoes. Obviously a lot
+                of thought has been put in by the developers. Interesting game.” </p>
+                        </div>
+                        <div class="profile-1-2 bp3-animate-enter66" show-on-scroll>
+                            <img class="profile-6-2" src="img/profile-2.png"/>
+                            <div class="profile-6-2">
+</div>
+                            <p class="text-4-2 inter-medium-soap-16px">
+                “Never realised how little I know about these group of people, wonderful experience!” </p>
+                        </div>
+                        <div class="profile-1-3 bp3-animate-enter67" show-on-scroll>
+                            <img class="profile-6-3" src="img/profile-3.png"/>
+                            <div class="profile-6-3">
+</div>
+                            <p class="text-4-3 inter-medium-soap-16px">
+                “I think it helps us be more self-aware of how the comments/joke we made that could've been seen as inconsequential will hurt others, also to hold ourselves back before making such remark on other's expense.” </p>
+                        </div>
+                        <div class="profile-1-4 bp3-animate-enter68" show-on-scroll>
+                            <img class="profile-6-4" src="img/profile-4.png"/>
+                            <div class="profile-6-4">
+</div>
+                            <p class="text-4-4 inter-medium-soap-16px">
+                “I'm just glad this game exists 🙂” </p>
+                        </div>
+                    </div>
+                    <div class="overlap-group8">
+                        <div class="media-features-1 bp3-animate-enter32" show-on-scroll>
+                            <div class="media-features-2">Media features</div>
+                            <div class="featured-in-1">
+                                <div class="flex-col-1">
+                                    <img class="business-times-big-1-1" src="img/business-times-big-1@2x.png"/>
+                                    <img class="rectangle-3" src="img/rectangle@2x.png"/>
+                                    <img class="straits-times-horizontal-1-1" src="img/straits-times-horizontal-1@2x.png"/>
+                                    <img class="tech-coffee-house-02-2-1" src="img/tech-coffee-house-02-2@2x.png"/>
+                                </div>
+                                <div class="flex-col-2">
+                                    <img class="sg-mag-big-1-1" src="img/sg-mag-big-1@2x.png"/>
+                                    <img class="rectangle-4" src="img/rectangle-1@2x.png"/>
+                                    <img class="lc03-1-1-1" src="img/lc-03-1-1@2x.png"/>
+                                    <img class="rectangle-5" src="img/rectangle-2@2x.png"/>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="colour-cover-1"></div> -->
+                    </div>
+                </div>
+                <div class="about-1">
+                    <img class="about-the-project-icon bp3-animate-enter37" show-on-scroll src="img/icon-heart.gif"/>
+                    <div class="about-the-project-1 bp3-animate-enter40" show-on-scroll>About the project</div>
+                    <div class="text-10 bp3-animate-enter41" show-on-scroll>
+                        To Be You was conceived to help dismantle stereotypes and reduce prejudice, and ultimately foster greater
+                        empathy and inclusiveness among Singaporeans. This idea was one of the winners of the 2020 MCCY:Mission
+                        Unite Hackathon.
+
+                        <br/>
+                        <br/>This is a project by the non-profit volunteer-run techforgood community,
+                        better.sg. At better.sg, we brainstorm, build, and supercharge techforgood digital tools to address
+                        societal issues.
+                    </div>
+                    <div class="button-play-now-17 bp3-animate-enter38" show-on-scroll>
+                        <div class="play-now-4 valign-text-middle inter-black-white-20px">
+                            <a href="about.html" class="text-light">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="get-in-touch-1" show-on-scroll>
+                    <div class="overlap-group10 text-center">
+                        <img class="bgrd-print" src="img/pattern-print-1@1x.png"/>
+                        <img class="get-in-touch-icon-1 bp3-animate-enter33" show-on-scroll src="img/icon-mail.gif"/>
+                        <div class="text-get-in-touch bp3-animate-enter34" show-on-scroll>
+                            <div class="text-8-1">Get in touch with us</div>
+                            <div class="text-9">Contact us if you have a story to share, feedback for us, or are interested in using the platform for
+                                your school / organisation training needs
+</div>
+                        </div>
+                        <div class="button-play-now-15 bp3-animate-enter35" show-on-scroll>
+                            <div class="play-now-4 valign-text-middle inter-black-orange-red-20px">
+                                <a href="https://form.typeform.com/to/UnNtHibn?typeform-medium=embed-snippet&typeform-welcome=0">Contact Us</a>
+                            </div>
+                        </div>
+                        <div class="button-play-now-16 bp3-animate-enter36" show-on-scroll>
+                            <div class="play-now-4 valign-text-middle inter-black-orange-red-20px">
+                                <a href="https://form.typeform.com/to/UnNtHibn?typeform-medium=embed-snippet&typeform-welcome=0">Media Enquiries</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-1">
+                    <div class="logo-3 bp3-animate-enter39" show-on-scroll>
+                        <div class="overlap-group-21">
+                            <img class="you-3" src="img/you-1@2x.png"/>
+                            <img class="bubble-3" src="img/bubble-1@2x.png"/>
+                            <img class="to-be-3" src="img/to-be-1@2x.png"/>
+                        </div>
+                    </div>
+                    <div class="text-11 inter-bold-white-18px">
+                        ToBeYou.sg is a non-profit volunteer-run project by better.sg.
+</div>
+                    <div class="frame-145">
+                        <div class="frame-146 inter-normal-soap-18px">
+                            <div class="game-faq-1">Game FAQ</div>
+                            <div class="contact-us-1"></div>
+                            <div class="privacy-1">Privacy</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>         
+        <!--home-768-px-->         
+        <div class="container-center-horizontal">
+            <div class="home-768-px screen">
+                <div class="flex-col-3">
+                    <div class="overlap-group12-1">
+                        <div class="hero-768-px">
+                            <div class="overlap-group2-1">
+                                <div class="overlap-group-23">
+                                    <div class="bkgrd-aqua-2 bp2-animate-enter"></div>
+                                </div>
+                                <img class="iconmenu-1" src="img/icon-menu-1@2x.png"/>
+                                <div class="frame-148">
+                                    <div class="logo-4 bp2-animate-enter2">
+                                        <div class="overlap-group-24">
+                                            <img class="you-4" src="img/you-2@2x.png"/>
+                                            <img class="bubble-4" src="img/bubble-2@2x.png"/>
+                                            <img class="to-be-4" src="img/to-be-2@2x.png"/>
+                                        </div>
+                                    </div>                                     
+                                    <div class="text-13 bp2-animate-enter50">What’s it like to be you?</div>
+                                    <div class="text-12 bp2-animate-enter51">An award-winning game about empathy</div>                                     
+                                </div>                                 
+                                <div class="overlap-group1-7">
+                                    <img class="ravi-pose-01-1-2 bp2-animate-enter4" src="img/ravi-pose-01-1-1@1x.png"/>
+                                    <img class="zhihao-3 bp2-animate-enter5" src="img/zhihao-1@1x.png"/>
+                                    <img class="aman-2 bp2-animate-enter6" src="img/aman-5@1x.png"/>
+                                    <img class="nadia-2 bp2-animate-enter7" src="img/nadia-hero_no-shadow.png"/>
+                                </div>
+                                <div class="button-play-now-18 bp2-animate-enter8">
+                                    <div class="play-now-5 valign-text-middle inter-black-bunting-20px">
+                                        <a href="https://game.tobeyou.sg">Play now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="experience-life-1">
+                            <div class="text-15 bp2-animate-enter9" show-on-scroll>
+                                <div class="experience-life-text-1">
+                                    <div class="an-award-winning-14">Experience life as another Singaporean</div>
+                                    <div class="an-award-winning-15 inter-medium-white-20px">
+                                        What if your race, gender, and other &#34;identities&#34; were something else? 
+                                        <br/>What would life
+                                        be like? What challenges and opportunities would you have that are different? 
+                                        <br/>To Be You gives
+                                        you a chance to experience it in a safe space.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="button-play-now-19 bp2-animate-enter10" show-on-scroll>
+                                <div class="play-now-5 valign-text-middle inter-black-bunting-20px">
+                                    <a href="https://game.tobeyou.sg">Play now</a>
+                                </div>
+                            </div>
+                            <div class="mobile-screens-1 bp2-animate-enter11" show-on-scroll>
+                                <img class="bgnadiacanteen-afternoon-2" src="img/bg-nadia-canteen-afternoon-1@2x.png"/>
+                                <img class="bgnadiacanteen-afternoon-3" src="img/bg-nadia-canteen-afternoon-2@2x.png"/>
+                                <img class="bgnadiaplayground-2" src="img/bg-nadia-playground-1@2x.png"/>
+                                <div class="chloe-1">
+                                    <img class="screenshot-2021-09-28-at-129-1-2" src="img/screenshot-2021-09-28-at-1-29-1-3@2x.png"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="stories-container-1">
+            <div class="stories-nadia-768-px">
+              <div class="overlap-group3-1">
+                <div class="text-16 bp2-animate-enter12" show-on-scroll>
+                  <div class="nadia17">Nadia, 17</div>
+                  <p class="an-award-winning-13 inter-medium-white-16px">
+                    Nadia binte Rahim wants to survive JC and become a doctor - but will self-doubt and young love get in the way?
+                  </p>
+                </div>
+                <div class="side-characters-5 bp2-animate-enter13" show-on-scroll>
+                  <div class="overlap-group-25">
+                    <img class="gavin-2" src="img/gavin-1@1x.png" />
+                    <img class="azlinhappy-1-2" src="img/azlin-happy-1-3@1x.png" />
+                    <img class="rahman-1-2" src="img/rahman-1-3@1x.png" />
+                    <img class="chloe-normal-1-2" src="img/chloe-normal-1-3@1x.png" />
+                    <div class="gradient-1"></div>
+                  </div>
+                </div>
+                <img class="nadia-profile-2 bp2-animate-enter14" show-on-scroll src="img/nadia-profile-3@1x.png" />
+                <div class="button-play-now-20 bp2-animate-enter15" show-on-scroll>
+                  <div class="play-now-5 valign-text-middle inter-black-bunting-20px"><a  href="https://game.tobeyou.sg">Play now</a></div>
+                </div>
+              </div>
+            </div>
+            <div class="stories-8 adapterpedisplay-black-white-200px bp2-animate-enter55" show-on-scroll>STORIES</div>
+          </div> -->
+                    <!-- <div class="stories-container-2">
+            <div class="stories-aman-768-px">
+              <div class="stories-9 adapterpedisplay-black-white-200px bp2-animate-enter16" show-on-scroll>STORIES</div>
+              <div class="text-17 bp2-animate-enter17" show-on-scroll>
+                <div class="aman18">Aman, 18</div>
+                <p class="an-award-winning-13 inter-medium-blue-charcoal-16px">
+                  National Service, family expectations, personal dreams, and faith - must Aman Singh give up something he values in order to succeed?
+                </p>
+              </div>
+              <div class="overlap-group4-2">
+                <div class="sidecharacters-1 bp2-animate-enter18" show-on-scroll>
+                  <div class="over-container-3">
+                    <div class="overlap-group-22">
+                      <img class="sergeant-1-2" src="img/sergeant-1@1x.png" />
+                      <img class="lukman2-2" src="img/lukman-2@1x.png" />
+                      <img class="jothi2-1-2" src="img/jothi-2-1-1@1x.png" />
+                      <img class="selinder1-2" src="img/selinder-1-1@1x.png" />
+                    </div>
+                    <div class="cover-7"></div>
+                  </div>
+                </div>
+                <img class="amanactive-2 bp2-animate-enter19" show-on-scroll src="img/aman-active@1x.png" />
+                <div class="button-play-now-21 bp2-animate-enter20" show-on-scroll>
+                  <div class="play-now-5 valign-text-middle inter-black-bunting-20px"><a  href="https://game.tobeyou.sg">Play now</a></div>
+                </div>
+              </div>
+            </div>
+            <div class="stories-ravi-768-px">
+              <div class="stories-10 adapterpedisplay-black-white-200px bp2-animate-enter21" show-on-scroll>
+                STORIES
+              </div>
+              <div class="overlap-group5-2">
+                <div class="sidecharacters-2 bp2-animate-enter22" show-on-scroll>
+                  <div class="over-container-4">
+                    <div class="overlap-group-22">
+                      <img class="sergeant-1-2" src="img/sergeant-1@1x.png" />
+                      <img class="lukman2-2" src="img/lukman-2@1x.png" />
+                      <img class="jothi2-1-2" src="img/jothi-2-1-2@1x.png" />
+                      <img class="selinder1-2" src="img/selinder-1-1@1x.png" />
+                    </div>
+                    <div class="cover-8"></div>
+                  </div>
+                </div>
+                <img class="ravi-pose-02-3 bp2-animate-enter23" show-on-scroll src="img/ravi-pose-02-3@1x.png" />
+                <div class="button-play-now-22 bp2-animate-enter24" show-on-scroll>
+                  <div class="play-now-5 valign-text-middle inter-black-bunting-20px"><a  href="https://game.tobeyou.sg">Play now</a></div>
+                </div>
+                <div class="stories-ravi-2 bp2-animate-enter25" show-on-scroll>
+                  <div class="text-14">
+                    <div class="ravi-20-3 inter-black-blue-charcoal-34px">Ravi, 25</div>
+                    <div class="coming-soon-4">COMING SOON</div>
+                    <p class="an-award-winning-16 inter-medium-blue-charcoal-16px">
+                      Ravi Kannaswamy dreams of being an aviation engineer - but can he push past the stereotypes and self-doubts?
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="stories-zhihao-768-px">
+              <div class="stories-11 adapterpedisplay-black-white-200px bp2-animate-enter26" show-on-scroll>
+                STORIES
+              </div>
+              <div class="stories-zhihao-2 bp2-animate-enter30" show-on-scroll>
+                <div class="text-14">
+                  <div class="zhihao-18">Zhihao, 20</div>
+                  <div class="coming-soon-5">COMING SOON</div>
+                  <p class="an-award-winning-17">
+                    Zhihao Lim might have a future in e-sports, but will it disappear before his eyes? Life is about to get complicated, as a fateful Tweet gains a life of its own...
+                  </p>
+                </div>
+              </div>
+              <div class="overlap-group6-2">
+                <div class="sidecharacters-3 bp2-animate-enter27" show-on-scroll>
+                  <div class="over-container-5">
+                    <div class="overlap-group-22">
+                      <img class="sergeant-1-2" src="img/sergeant-1-1@1x.png" />
+                      <img class="lukman2-2" src="img/lukman-2-1@1x.png" />
+                      <img class="jothi2-1-2" src="img/jothi-2-1-3@1x.png" />
+                      <img class="selinder1-2" src="img/selinder-1-2@1x.png" />
+                    </div>
+                    <div class="cover-9"></div>
+                  </div>
+                </div>
+                <img class="zhihao-4 bp2-animate-enter28" show-on-scroll src="img/zhihao-2@1x.png" />
+                <div class="button-play-now-23 bp2-animate-enter29" show-on-scroll>
+                  <div class="play-now-5 valign-text-middle inter-black-bunting-20px"><a  href="https://game.tobeyou.sg">Play now</a></div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+                    <div class="overlap-group13-1">
+                        <div class="overlap-group10-1">
+                            <div class="get-in-touch-2">
+                                <div class="overlap-group7-1">
+                                    <img class="get-in-touch-icon-2 bp2-animate-enter31" show-on-scroll src="img/icon-mail.gif"/>
+                                    <div class="get-in-touch-text-1 bp2-animate-enter34" show-on-scroll>
+                                        <div class="text-14-1 bp2-animate-enter32" show-on-scroll>Get in touch with us</div>
+                                        <div class="text-15-1 bp2-animate-enter33" show-on-scroll>
+                                            <a href="https://form.typeform.com/to/UnNtHibn?typeform-medium=embed-snippet&typeform-welcome=0">Contact Us</a> if you have a story to share, feedback for us, or are interested in using the platform
+                                            for your school / organisation training needs
+                                        </div>
+                                    </div>
+                                    <img class="pattern-print" src="img/pattern-print@1x.png"/>
+                                    <div class="buttons-1">
+                                        <div class="button-play-now-24 bp2-animate-enter36" show-on-scroll>
+                                            <div class="play-now-6 valign-text-middle inter-black-orange-red-20px">
+                                                <a href="https://form.typeform.com/to/UnNtHibn?typeform-medium=embed-snippet&typeform-welcome=0">Contact Us</a>
+                                            </div>
+                                        </div>
+                                        <div class="button-play-now-25 bp2-animate-enter35" show-on-scroll>
+                                            <div class="play-now-6 valign-text-middle inter-black-orange-red-20px">Media Enquiries</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="what-players-say-4">
+                                <div class="what-people-say-icon-2 bp2-animate-enter39" show-on-scroll>
+                                    <div class="overlap-group1-8">
+                                        <img class="vector-9" src="img/icon-review-smile.gif"/>
+                                    </div>
+                                </div>
+                                <div class="text-18 bp2-animate-enter42" show-on-scroll>
+                                    <div class="what-players-say-5 bp2-animate-enter40" show-on-scroll>What players say</div>
+                                    <div class="text-21 inter-medium-white-20px bp2-animate-enter41" show-on-scroll>
+                                        Since the release on Racial Harmony Day in 2021, the game has received thousands of authentic player reflections:
+</div>
+                                </div>
+                                <div class="overlap-group8-1">
+                                    <div class="bgrd-1">
+                                        <img class="soft-spotlight-2" src="img/soft-spotlight-1@2x.png"/>
+                                    </div>
+                                    <div class="reviews-1">
+                                        <div class="profile-1-2 bp2-animate-enter50" show-on-scroll>
+                                            <div class="profile-10">
+                                                <div class="overlap-group-26">
+                                                    <img class="profile-10" src="img/profile-1.png">
+                                                </div>
+                                            </div>
+                                            <div class="text-17-1 inter-medium-soap-18px">
+                                                “I like that i can read Nadia&#39;s thoughts in the game, really puts me in her shoes. Obviously
+                                                a lot of thought has been put in by the developers. Interesting game.”
+</div>
+                                        </div>
+                                        <div class="profile-2-2 bp2-animate-enter51" show-on-scroll>
+                                            <div class="text-18-1 inter-medium-soap-18px">
+                                                “Never realised how little I know about these group of people, 
+                                                <br/>wonderful experience!”
+                                            </div>
+                                            <div class="profile-11">
+                                                <div class="overlap-group-27">
+                                                    <img class="profile-11" src="img/profile-2.png"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="profile-3-3 bp2-animate-enter52" show-on-scroll>
+                                            <div class="profile-12">
+                                                <div class="overlap-group-28">
+                                                    <img class="profile-12" src="img/profile-3-new.png"/>
+                                                </div>
+                                            </div>
+                                            <div class="text-19 inter-medium-soap-18px">
+                                                “I think it helps us be more self-aware of how the comments/joke we made that could&#39;ve been
+                                                seen as inconsequential will hurt others, also to hold ourselves back before making such remark
+                                                on other&#39;s expense”
+</div>
+                                        </div>
+                                        <div class="profile-4-3 bp2-animate-enter53" show-on-scroll>
+                                            <div class="text-20 inter-medium-soap-18px">“I&#39;m just glad this game exists 🙂”</div>
+                                            <div class="profile-13">
+                                                <div class="overlap-group-29"> 
+                                                    <img class="profile-13" src="img/profile-4.png"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="media-features-3">
+                                    <div class="media-features-4 bp2-animate-enter38" show-on-scroll>Media features</div>
+                                    <div class="media-features-5 bp2-animate-enter38" show-on-scroll>
+                                        <div class="featured-in-2">
+                                            <div class="overlap-group-30">
+                                                <img class="rectangle-6" src="img/rectangle-9@2x.png"/>
+                                                <img class="rectangle-7" src="img/rectangle-4@2x.png"/>
+                                                <img class="business-times-big-1-2" src="img/business-times-big-1-1@2x.png"/>
+                                                <img class="sg-mag-big-1-2" src="img/sg-mag-big-1-1@2x.png"/>
+                                                <img class="straits-times-horizontal-1-2" src="img/straits-times-horizontal-1-1@2x.png"/>
+                                                <img class="lc03-1-1-2" src="img/lc-03-1-1-1@2x.png"/>
+                                                <img class="tech-coffee-house-02-2-2" src="img/tech-coffee-house-02-2-3@2x.png"/>
+                                                <img class="rectangle-8" src="img/rectangle-11@2x.png"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="about-the-progect-1">
+                                <img class="about-icon-1 bp2-animate-enter47" show-on-scroll src="img/icon-heart.gif"/>
+                                <div class="text-about-the-project-1 bp2-animate-enter46" show-on-scroll>
+                                    <div class="about-the-project-2 bp2-animate-enter44" show-on-scroll>About the project</div>
+                                    <div class="text-22 bp2-animate-enter45" show-on-scroll>
+                                        To Be You was conceived to help dismantle stereotypes and reduce prejudice, and ultimately foster
+                                        greater empathy and inclusiveness among Singaporeans. This idea was one of the winners of the 2020
+                                        MCCY:Mission Unite Hackathon.
+                                        <br/>
+                                        <br/>This is a project by the non-profit volunteer-run
+                                        techforgood community, better.sg. At better.sg, we brainstorm, build, and supercharge techforgood
+                                        digital tools to address societal issues.
+                                    </div>
+                                </div>
+                                <div class="button-play-now-26 bp2-animate-enter43" show-on-scroll>
+                                    <div class="play-now-6 valign-text-middle inter-black-white-20px">
+                                        <a href="about.html">Learn more</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-2">
+                        <div class="logo-5 bp2-animate-enter37" show-on-scroll>
+                            <div class="overlap-group-31">
+                                <img class="you-5" src="img/you-3@2x.png"/>
+                                <img class="bubble-5" src="img/bubble-3@2x.png"/>
+                                <img class="to-be-5" src="img/to-be-3@2x.png"/>
+                            </div>
+                        </div>
+                        <div class="text-16-1 inter-bold-white-18px">
+                            ToBeYou.sg is a non-profit volunteer-run project 
+                            <br/>by better.sg.
+                        </div>
+                        <div class="links-1 inter-normal-soap-18px">
+                            <div class="game-faq-2 valign-text-middle">Game FAQ</div>
+                            <div class="contact-us-2 valign-text-middle">
+                                <a href="https://form.typeform.com/to/UnNtHibn?typeform-medium=embed-snippet&typeform-welcome=0">Contact Us</a>
+                            </div>
+                            <div class="privacy-2 valign-text-middle">Privacy</div>
+                        </div>
+                        <div class="to-top-icon-2">
+                            <img class="icon-r-2" src="img/icon--r--1@2x.png"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--home-1440-px-->         
+        <div class="container-center-horizontal">
+            <div class="home-1440-px screen">
+                <div class="x1-hero-banner">
+                    <div class="bkgrd-aqua bp1-animate-enter24"></div>
+                    <div class="overlap-group">
+                        <div class="overlap-group-2">
+                            <div class="gradient"></div>
+                        </div>
+                        <div class="group-shot"> 
+                            <div class="overlap-group1">
+                                <div class="ravi-container"> 
+                                    <img class="ravi-pose-01-1 bp1-animate-enter26" src="img/ravi-pose-01-1-5@1x.png"/>
+                                    <div class="text-ravi-name">Ravi</div>
+                                </div>
+                                <img class="zhihao bp1-animate-enter27" src="img/zhihao_new_hero.png"/>
+                                <div class="aman-container">
+                                    <img class="aman bp1-animate-enter28" src="img/aman-5@1x.png"/>
+                                    <div class="text-aman-name">Aman</div>                                     
+                                </div>
+                                <div class="nadia-container">
+                                    <img class="nadia bp1-animate-enter29" src="img/nadia-hero_no-shadow.png"/>
+                                    <div class="text-nadia-name">Nadia</div>
+                                </div>
+                            </div>
+                        </div>                         
+                        <div class="text-34 bp1-animate-enter30">What’s it like to be you?</div>
+                        <div class="text-35 bp1-animate-enter25">An award-winning game about empathy</div>                         
+                        <div class="button-play-now bp1-animate-enter31">
+                            <div class="play-now valign-text-middle inter-black-bunting-20px">
+                                <a href="https://game.tobeyou.sg">Play now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fixed-elements">
+                    <div class="overlap-group"> 
+                        <img class="gradient-darkener" src="img/gradient-darkener@1x.png"/>
+                        <div class="top bp1-animate-enter52">
+                            <div class="menu-nav">
+                                <div class="logo">
+                                    <div class="overlap-group-3">
+                                        <img class="you" src="img/you-5@2x.png"/>
+                                        <img class="bubble" src="img/bubble-5@2x.png"/>
+                                        <img class="to-be" src="img/to-be-5@2x.png"/>
+                                    </div>
+                                </div>
+                                <div class="flex-col">
+                                    <div class="menu-items inter-extra-bold-white-16px">
+                                        <!-- <div class="game">Game</div> -->
+                                        <a class="about" href="about.html">About</a>
+                                        <!-- <div class="for-teachers">Facilitator Login</div> -->
+                                    </div>
+                                    <!-- <div class="highight"></div> -->
+                                </div>
+                                <a class="button" href="https://game.tobeyou.sg" target="_blank"><div class="login valign-text-middle">Play</div></a> 
+                            </div>
+                        </div>
+                        <div class="social-media-icons bp1-animate-enter53">
+                            <a href="https://www.facebook.com/ToBeYou.SG/" target="_blank" rel="noopener noreferrer"><img class="facebook" src="img/facebook.svg"/></a>
+                            <a href="https://www.instagram.com/tobeyou.sg/" target="_blank" rel="noopener noreferrer"><img class="instagram" src="img/instagram (1).svg"/></a>
+                            <a href="https://www.reddit.com/r/singapore/comments/ooft34/launching_tobeyousg_a_singaporean_interactive/" target="_blank" rel="noopener noreferrer"><img class="reddit" src="img/reddit.svg"/></a>
+                            <a href="https://t.me/ToBeYouSG" target="_blank" rel="noopener noreferrer"><img class="telegram" src="img/telegram.svg"/></a>
+                        </div>
+                        <div class="white-border"></div>
+                    </div>
+                </div>
+                <div class="x2nd-section" show-on-scroll>
+                    <div class="column-02 bp1-animate-enter19" show-on-scroll>
+                        <div class="overlap-group-4" show-on-scroll>
+                            <img class="bgnadiaplayground" src="img/bg-nadia-playground-3@2x.png"/>
+                            <img class="bgnadiacanteen-afternoon" src="img/bg-nadia-canteen-afternoon-5@2x.png"/>
+                            <img class="lorem-ipsum" src="img/lorem ipsum.png"/>
+                        </div>
+                    </div>
+                    <div class="colunm-01 bp1-animate-enter20" show-on-scroll>
+                        <div class="overlap-group1-1" show-on-scroll>
+                            <img class="bgamanbmtcookhouse" src="img/bg-aman-bmtcookhouse@2x.png"/>
+                            <img class="screenshot-2021-09-28-at-129-1" src="img/screenshot-2021-09-28-at-1-29-1@2x.png"/>
+                            <img class="bgamanmirrorinroom" src="img/bg-aman-mirrorinroom@2x.png"/>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <div class="frame-137 bp1-animate-enter21" show-on-scroll>
+                            <div class="an-award-winning">Experience life as another Singaporean</div>
+                            <div class="an-award-winning-1 inter-medium-white-20px">
+                                What if your race, gender, and other &#34;identities&#34; were something else? 
+                                <br/>What would life be
+                                like? What challenges and opportunities would you have that are different? 
+                                <br/>To Be You gives you a
+                                chance to experience it in a safe space.
+                            </div>
+                        </div>
+                        <div class="button-play-now-1 bp1-animate-enter22" show-on-scroll>
+                            <div class="play-now valign-text-middle inter-black-bunting-20px">
+                                <a href="https://game.tobeyou.sg">Play now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="stories-nadia">
+          <div class="stories-nadia-1">
+            <div class="overlap-group1-2">
+              <div class="bkgrd-1"></div>
+              <div class="stories-1 bp1-animate-enter36" show-on-scroll>STORIES</div>
+              <div class="side-characters bp1-animate-enter32" show-on-scroll>
+                <div class="overlap-group-5">
+                  <img class="gavin" src="img/gavin-3@1x.png" />
+                  <img class="azlinhappy-1" src="img/azlin-happy-1@1x.png" />
+                  <img class="rahman-1" src="img/rahman-1@1x.png" />
+                  <img class="chloe-normal-1" src="img/chloe-normal-1@1x.png" />
+                 <div class="cover"></div>
+                </div>
+              </div>
+              <img class="nadia-profile bp1-animate-enter33" show-on-scroll src="img/nadia-profile-3@1x.png" />
+              <div class="text-1 bp1-animate-enter34" show-on-scroll>
+                <div class="frame-137-1">
+                  <div class="an-award-winning-2">Nadia, 17</div>
+                  <div class="an-award-winning-3 inter-medium-white-20px">
+                    Nadia binte Rahim wants to survive JC and become a doctor - but will self-doubt and young love get in the way?
+                  </div>
+                </div>
+              </div>
+              <div class="button-play-now-2 bp1-animate-enter35" show-on-scroll>
+                <div class="play-now valign-text-middle inter-black-bunting-20px"><a  href="https://game.tobeyou.sg">Play now</a></div>
+              </div>
+            </div>
+          </div>
+        </div> -->
+                <!-- <div class="stories-aman">
+          <div class="overlap-group4"> -->
+                <!--<div class="stories-2 adapterpedisplay-black-white-240px bp1-animate-enter36" show-on-scroll>STORIES</div>-->
+                <!-- <div class="side-characters-1 bp1-animate-enter37" show-on-scroll>
+              <div class="over-container-1">
+                <div class="overlap-group-6">
+                  <img class="sergeant-1" src="img/sergeant-1@1x.png" />
+                  <img class="lukman2" src="img/lukman-2@1x.png" />
+                  <img class="jothi2-1" src="img/jothi-2-1@1x.png" />
+                  <img class="selinder1" src="img/selinder-1-9@1x.png" />
+                </div>
+                <div class="cover-1"></div>
+              </div>
+            </div>
+            <img class="amanactive bp1-animate-enter38" show-on-scroll src="img/aman-active-3@1x.png" />
+            <div class="text-2 bp1-animate-enter39" show-on-scroll>
+              <div class="aman-18">Aman, 18</div>
+              <div class="an-award-winning-4">
+                National Service, family expectations, personal dreams, and faith - must Aman Singh give up something he values in order to succeed?
+              </div>
+            </div>
+            <div class="button-play-now-3 bp1-animate-enter40" show-on-scroll>
+              <div class="play-now valign-text-middle inter-black-bunting-20px"><a  href="https://game.tobeyou.sg">Play now</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="stories-ravi">
+          <div class="overlap-group5"> -->
+                <!-- <div class="stories-3 adapterpedisplay-black-white-240px bp1-animate-enter42" show-on-scroll>STORIES</div>-->
+                <!-- <div class="side-characters-2 bp1-animate-enter41" show-on-scroll>
+              <div class="over-container-1">
+                <div class="overlap-group-6-1">
+                  <img class="lukman2" src="img/lukman-2@1x.png" />
+                  <img class="sergeant-1" src="img/sergeant-1@1x.png" />
+                  <img class="jothi2-1" src="img/jothi-2-1@1x.png" />
+                  <img class="selinder1" src="img/selinder-1-9@1x.png" />
+                </div>
+                <div class="cover-2"></div>
+              </div>
+            </div>
+            <img class="ravi-pose-02-1 bp1-animate-enter43" show-on-scroll src="img/ravi-pose-02-1@1x.png" />
+            <div class="text-3 bp1-animate-enter44" show-on-scroll>
+              <div class="ravi-20">Ravi, 25</div>
+              <div class="coming-soon">COMING SOON</div>
+              <div class="text-36">
+                Ravi Kannaswamy dreams of being an aviation engineer - but can he push past the stereotypes and self-doubts?
+              </div>
+            </div>
+            <div class="button-play-now-4 bp1-animate-enter45" show-on-scroll>
+              <div class="play-now valign-text-middle inter-black-bunting-20px"><a  href="https://game.tobeyou.sg">Play now</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="stories-zhihao">
+          <div class="overlap-group6">
+            <div class="side-characters-3 bp1-animate-enter46" show-on-scroll>
+                <div class="over-container-1">
+                  <div class="overlap-group-6-2">
+                    <img class="sergeant-1" src="img/sergeant-1@1x.png" />
+                    <img class="lukman2" src="img/lukman-2@1x.png" />
+                    <img class="jothi2-1" src="img/jothi-2-1@1x.png" />
+                    <img class="selinder1" src="img/selinder-1-9@1x.png" />
+                  </div>
+                <div class="cover-3"></div>
+              </div>
+            </div>
+            <img class="zhihao-1 bp1-animate-enter47" show-on-scroll src="img/zhihao-8@1x.png" /> -->
+                <!--<div class="stories-4 adapterpedisplay-black-white-240px bp1-animate-enter48" show-on-scroll>STORIES</div>-->
+                <!-- <div class="text-4 bp1-animate-enter49" show-on-scroll>
+              <div class="zhihao18">Zhihao, 18</div>
+              <div class="coming-soon-1">COMING SOON</div>
+              <div class="an-award-winning-5">
+                Zhihao Lim might have a future in e-sports, but will it disappear before his eyes? Life is about to get complicated, as a fateful Tweet gains a life of its own...
+              </div>
+            </div>
+            <div class="button-play-now-5 bp1-animate-enter50" show-on-scroll>
+              <div class="play-now valign-text-middle inter-black-bunting-20px"><a  href="https://game.tobeyou.sg">Play now</a></div>
+            </div>
+          </div>
+        </div>-->
+                <div class="what-players-say">
+                    <div class="overlap-group2">
+                        <div class="bkgrd">
+                            <img class="soft-spotlight" src="img/soft-spotlight@1x.png"/>
+                        </div>                         
+                        <div class="reviews" show-on-scroll>
+                            <div class="profile-1 bp1-animate-enter58" show-on-scroll>
+                                <img class="profile-1-img" src="img/profile-1.png"/> 
+                                <div class="text-29 inter-medium-soap-20px">
+                                    “I like that i can read Nadia&#39;s thoughts in the game, really puts me in her shoes. Obviously a lot
+                                    of thought has been put in by the developers. Interesting game.”
+</div>
+                            </div>
+                            <div class="profile-2 bp1-animate-enter59" show-on-scroll"">
+                                <div class="text-30 inter-medium-soap-20px">
+                                    “Never realised how little I know about these group of people, wonderful experience!”
+</div>
+                                <img class="profile-2-img" src="img/profile-2.png"/>
+                            </div>
+                            <div class="profile-3 bp1-animate-enter60" show-on-scroll"">
+                                <img class="profile-3-img" src="img/profile-3.png"/>
+                                <div class="text-31 inter-medium-soap-20px">
+                                    “I think it helps us be more self-aware of how the comments/joke we made that could&#39;ve been seen
+                                    as inconsequential will hurt others, also to hold ourselves back before making such remark on
+                                    other&#39;s expense”
+</div>
+                            </div>                             
+                            <div class="profile-4 bp1-animate-enter61" show-on-scroll"">
+                                <div class="text-32 inter-medium-soap-20px">“I&#39;m just glad this game exists 🙂”</div>
+                                <img class="profile-4-img" src="img/profile-4.png"/> 
+                            </div>
+                        </div>
+                        <div class="what-people-say">
+                            <div class="what-people-say-icon bp1-animate-enter15" show-on-scroll>
+                                <div class="overlap-group-9">
+                                    <img class="what-people-say-icon" src="img/icon-review-smile.gif"/>
+                                </div>
+                            </div>
+                            <div class="what-players-say-1 bp1-animate-enter12" show-on-scroll>What players say</div>
+                            <div class="text-33 inter-medium-white-20px bp1-animate-enter13" show-on-scroll>
+                                Since the release on Racial Harmony Day in 2021, the game has received thousands of authentic player reflections:
+</div>
+                        </div>
+                        <div class="media-feature bp1-animate-enter18" show-on-scroll>
+                            <div class="overlap-group1-3">
+                                <div class="featured-in bp1-animate-enter16" show-on-scroll>
+                                    <img class="straits-times-horizontal-1" src="img/straits-times-horizontal-1@2x.png"/>
+                                    <img class="lc03-1-1" src="img/lc-03-1-1@2x.png"/>
+                                    <img class="rectangle" src="img/rectangle-9@2x.png"/>
+                                    <img class="rectangle-1" src="img/rectangle-1@2x.png"/>
+                                    <img class="tech-coffee-house-02-2" src="img/tech-coffee-house-02-2-3@2x.png"/>
+                                    <img class="rectangle-2" src="img/rectangle-2@2x.png"/>
+                                    <img class="business-times-big-1" src="img/business-times-big-1-3@2x.png"/>
+                                    <img class="sg-mag-big-1" src="img/sg-mag-big-1@2x.png"/>
+                                </div>
+                                <!-- <div class="colour-cover"></div> -->
+                            </div>
+                            <div class="media-features bp1-animate-enter17" show-on-scroll>Media features</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-the-progect">
+                    <img class="about-icon bp1-animate-enter11" show-on-scroll src="img/icon-heart.gif"/>
+                    <div class="text-about-the-project bp1-animate-enter10" show-on-scroll>
+                        <div class="about-the-project bp1-animate-enter8" show-on-scroll>About the project</div>
+                        <div class="text-28 bp1-animate-enter9" show-on-scroll>
+                            To Be You was conceived to help dismantle stereotypes and reduce prejudice, and ultimately foster greater
+                            empathy and inclusiveness among Singaporeans. This idea was one of the winners of the 2020 MCCY:Mission
+                            Unite Hackathon.
+                            <br/>
+                            <br/>This is a project by the non-profit volunteer-run techforgood community,
+                            better.sg. At better.sg, we brainstorm, build, and supercharge techforgood digital tools to address
+                            societal issues.
+                        </div>
+                    </div>
+                    <div class="button-play-now-6 bp1-animate-enter7" show-on-scroll>
+                        <div class="play-now-1 valign-text-middle inter-black-white-20px">
+                            <a href="about.html" class="text-light">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="get-in-touch">
+                    <div class="overlap-group-10">
+                        <img class="get-in-touch-icon bp1-animate-enter5" show-on-scroll src="img/icon-mail.gif"/>
+                        <div class="get-in-touch-text bp1-animate-enter2" show-on-scroll>
+                            <div class="text-25 bp1-animate-enter" show-on-scroll>Get in touch with us</div>
+                            <div class="text-26 bp1-animate-enter1" show-on-scroll>Contact us if you have a story to share, feedback for us, or are interested in using the platform for
+                                your school / organisation training needs
+</div>
+                        </div>
+                        <div class="buttons bp1-animate-enter4" show-on-scroll>
+                            <div class="button-play-now-8">
+                                <div class="play-now-2 valign-text-middle inter-black-orange-red-20px">
+                                    <a href="https://form.typeform.com/to/UnNtHibn?typeform-medium=embed-snippet&typeform-welcome=0"><a href="https://form.typeform.com/to/UnNtHibn?typeform-medium=embed-snippet&typeform-welcome=0">Contact Us</a></a>
+                                </div>
+                            </div>
+                            <div class="button-play-now-8">
+                                <div class="play-now-2 valign-text-middle inter-black-orange-red-20px">
+                                    <a href="https://form.typeform.com/to/UnNtHibn?typeform-medium=embed-snippet&typeform-welcome=0"><a href="https://form.typeform.com/to/UnNtHibn?typeform-medium=embed-snippet&typeform-welcome=0">Media Enquiries</a></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer">
+                    <div class="logo-1 bp1-animate-enter6" show-on-scroll>
+                        <div class="overlap-group-11">
+                            <img class="you-1" src="img/you-4@2x.png"/>
+                            <img class="bubble-1" src="img/bubble-4@2x.png"/>
+                            <img class="to-be-1" src="img/to-be-4@2x.png"/>
+                        </div>
+                    </div>
+                    <div class="text-27 inter-bold-white-18px">
+                        ToBeYou.sg is a non-profit volunteer-run project 
+                        <br/>by better.sg.
+                    </div>
+                    <div class="links inter-normal-soap-18px">
+                        <div class="game-faq valign-text-middle">Game FAQ</div>
+                        <div class="privacy valign-text-middle">Privacy</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    </div>
+    <!--Desktop-->
+</div>
+<script src="swiper/swiper-bundle.min.js"></script>
+<script>
+      function ShowOnScroll() {
+        this.toShow = [];
+        this.nextEventY = undefined;
+      }
+
+      ShowOnScroll.prototype.show = function (e) {
+        e.style.display = "";
+      };
+
+      ShowOnScroll.prototype.hide = function (e) {
+        e.style.display = "none";
+      };
+
+      ShowOnScroll.prototype.getTop = function (e) {
+        if (e.Top != undefined && e.Top != 0) {
+          return e.Top;
+        }
+        var top = 0;
+        var iter = e;
+        do {
+          top += iter.offsetTop || 0;
+          iter = iter.offsetParent;
+        } while (iter);
+        e.Top = top;
+        return top;
+      };
+
+      ShowOnScroll.prototype.onScroll = function () {
+        var screenBottom = window.pageYOffset + window.innerHeight;
+        if (this.nextEventY == undefined || this.nextEventY > screenBottom) {
+          return;
+        }
+        this.nextEventY = undefined;
+        for (var i = 0; i < this.toShow.length; i++) {
+          var e = this.toShow[i];
+          var top = this.getTop(e);
+          if (top < screenBottom) {
+            this.show(e);
+            this.toShow.shift();
+            i--;
+          } else {
+            this.nextEventY = top;
+            break;
+          }
+        }
+      };
+
+      ShowOnScroll.prototype.resetScrolling = function () {
+        // Clear state
+        var screenBottom = window.pageYOffset + window.innerHeight;
+        for (var i = 0; i < this.toShow.length; i++) {
+          var e = this.toShow[i];
+          this.show(e);
+        }
+        this.toShow = [];
+        this.nextEventY == undefined;
+
+        // Collect items
+        var itemsToShowOnScroll = Array.prototype.slice.call(document.getElementsByTagName("*"));
+        itemsToShowOnScroll = itemsToShowOnScroll.filter(function (e) {
+          return e.getAttribute("show-on-scroll") != undefined;
         });
+        var getTop = this.getTop;
+        itemsToShowOnScroll.sort(function (a, b) {
+          return getTop(a) - getTop(b);
+        });
+        for (var i = 0; i < itemsToShowOnScroll.length; i++) {
+          var e = itemsToShowOnScroll[i];
+          var top = this.getTop(e);
+          if (top < screenBottom) {
+            continue;
+          }
+          this.toShow.push(e);
+          this.hide(e);
+          this.nextEventY = this.nextEventY != undefined ? this.nextEventY : top;
+        }
+      };
 
-        $("[data-paroller-factor]").paroller();
+      ShowOnScroll.prototype.handleEvent = function (e) {
+        switch (e.type) {
+          case "scroll":
+            this.onScroll();
+            break;
+          case "resize":
+            this.resetScrolling();
+            break;
+        }
+      };
 
-    })
-   
-        
-    // const scriptURL = 'https://script.google.com/macros/s/AKfycbzwRpmq1SWlgDZj5yC09N12Z7Usqu2-EaKRhU7IVgkK35mxVoe1lSE5MXgAvxkune8/exec'
-    // const form = document.forms['submit-to-google-sheet']
+      ShowOnScroll.prototype.init = function () {
+        this.resetScrolling();
+        window.addEventListener("scroll", this);
+        window.addEventListener("resize", this);
+      };
+      
+      // After anima-src
+      setTimeout(function () {
+        var instShowOnScroll = new ShowOnScroll();
+        instShowOnScroll.init();
+      }, 250);
 
-    // form.addEventListener('submit', e => {
-    //     e.preventDefault()
-    //     console.log(form)
-    //     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-    //     .then(response => document.getElementById("submission").innerHTML = 'Success! Thanks for participating' )
-    //     .catch(error => document.getElementById("submission").innerHTML = 'Something went wrong. Please contact us at limzikun@better.sg if you still cannot submit' +  error.message)
-    // })
+      
+      new Swiper(".characters-carousel", {
+      speed: 400,
+      loop: true,
+      autoplay: {
+       delay: 3000,
+       disableOnInteraction: false,
+      },
+      pagination: {
+       el: ".swiper-pagination",
+       type: "bullets",
+       clickable: true,
+      },
+      });
 
-  </script>
-    </body>
-</html>
+    </script>
