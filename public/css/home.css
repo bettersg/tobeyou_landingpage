@@ -5385,6 +5385,7 @@ transform: translate(0,0);
   flex-direction: column;
   min-height: 100vh;
   width: 100%;
+  background: black;
 }
 
 .home-768-px .overlap-group12-1 {
@@ -5467,9 +5468,11 @@ transform: translate(0,0);
   position: absolute;
   top: 36px;
   width: 42px;
+  display:none;
 }
 
 .home-768-px .frame-148 {
+  z-index:1000;
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -6882,7 +6885,8 @@ transform: translate(0,0);
   height: 2930px;
   margin-right: 1.0px;
   position: relative;
-  width: 768px;
+  /* width: 768px; */
+  width: 100%;
 }
 
 .home-768-px .overlap-group10-1 {
@@ -6890,7 +6894,8 @@ transform: translate(0,0);
   left: 0;
   position: absolute;
   top: 0;
-  width: 768px;
+  /* width: 768px; */
+  width: 100%;
 }
 
 .home-768-px .get-in-touch-2 {
@@ -7037,11 +7042,12 @@ transform: translate(0,0);
 }
 
 .home-768-px .pattern-print {
-  height: 919px;
+  /* height: 919px; */
   left: 0;
   mix-blend-mode: multiply;
-  position: absolute;
+  /* position: absolute; */
   top: 0;
+  width: 100%;
 }
 
 .home-768-px .buttons-1 {
@@ -7141,7 +7147,8 @@ transform: translate(0,0);
   padding: 76px 0;
   position: absolute;
   top: 0;
-  width: 768px;
+  /* width: 768px; */
+  width: 100%;
 }
 
 .home-768-px .what-people-say-icon-2 {
@@ -7738,7 +7745,8 @@ transform: translate(0,0);
   padding: 76px 0;
   position: absolute;
   top: 1869px;
-  width: 768px;
+  /* width: 768px; */
+  width: 100%;
 }
 
 .home-768-px .about-icon-1 {
@@ -7898,7 +7906,8 @@ transform: translate(0,0);
   margin-right: 1.0px;
   min-height: 333px;
   padding: 19.3px 23.4px;
-  width: 768px;
+  /* width: 768px; */
+  width: 100%;
 }
 
 .home-768-px .logo-5 {
