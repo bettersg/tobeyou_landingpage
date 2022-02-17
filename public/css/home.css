@@ -5897,7 +5897,7 @@ transform: translate(0,0);
 .home-768-px .bgnadiacanteen-afternoon-2 {
   height: 452px;
   left: 671px;
-  object-fit: cover;
+  object-fit: contain;
   position: absolute;
   top: 0;
   width: 254px;
