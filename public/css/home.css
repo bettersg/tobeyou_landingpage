@@ -658,7 +658,7 @@
   flex-direction: column;
   margin-top: 9.0px;
   min-height: 29px;
-  width: 276px;
+  width: 126px;
 }
 
 .home-1440-px .menu-items {
@@ -699,6 +699,7 @@
   min-width: 100px;
   transition: all 0.2s ease;
   white-space: nowrap;
+  color: var(--white);
 }
 
 .home-1440-px .for-teachers:hover {
