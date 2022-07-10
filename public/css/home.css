@@ -2331,7 +2331,7 @@
   display: flex;
   justify-content: center;
   margin-left: 10%;
-  margin-top: 65%;
+  bottom: 150px !important;
 }
 
 .home-1440-px .media-feature.bp1-animate-enter18 {
