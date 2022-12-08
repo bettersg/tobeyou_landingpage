@@ -893,7 +893,7 @@ p {
 	}
 
 	.container-snap-parent {
-		overflow-y: scroll;
+		/* overflow-y: scroll; */
 		scroll-snap-type: y proximity;
 
 	}
