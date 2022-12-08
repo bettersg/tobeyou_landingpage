@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <title>CodePen - Image comparison on scroll - ScrollTrigger (fully responsive)</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+        <link rel="shortcut icon" type="image/png" href="img/favicon-96x96.png"/>
+        <meta property="og:url" content="https://tobeyou.sg/"/>
+        <meta property="og:title" content="ToBeYou: A Singaporean Interactive Fiction Game"/>
+        <meta property="og:description" content="An award-winning game about empathy"/>
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" type="text/css">
         <link href="style.css" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Inter:900,700,600,400,300&display=swap" rel="stylesheet" type="text/css">
@@ -11,7 +15,7 @@
     </head>
     <body style="background-color: #3dcad3; font-family: Inter !important; overflow-x: hidden; background-repeat: repeat;">
         <!-- partial:index.partial.html -->
-        <div data-pg-name="LargeScreens" id="large_container" class="scroll-snap-container" style="background-repeat: repeat; background-image: url('images/trans_background_pattern.png');">
+        <div data-pg-name="LargeScreens" id="large_container" class="scroll-snap-container">
             <nav style="padding: 45px; height: 15vh !important;" class="sticky-top">
                 <img src="images/logo.svg" class="header_bounce"/>
                 <ul class="float-right nav"> 
@@ -242,16 +246,16 @@ yellowshadow header_h1"> <span class="typewrite" data-period="2000" data-type='[
                     <h5 class="text-center text-white" style="margin-top: 25px;">Media features</h5>
                     <div class="row text-center">
                         <div class="col-sm-3">
-                            <a href="https://www.straitstimes.com/life/stay-home-guide-for-monday-build-empathy-with-free-online-game-decorate-hdb-corridor-for" target="_blank"><img src="images/media_st.png" class="animate_bounce img-fluid"></a>                              
+                            <a href="https://www.straitstimes.com/life/stay-home-guide-for-monday-build-empathy-with-free-online-game-decorate-hdb-corridor-for" target="_blank"><img src="images/media_st.png" class="animate_bounce img-fluid"></a> 
                         </div>
                         <div class="col-sm-3">
-                            <a href="https://www.businesstimes.com.sg/life-culture/interactive-mobile-game-to-encourage-empathy-and-dismantle-stereotypes" target="_blank"><img src="images/media_bt.png" class="animate_bounce img-fluid"></a>                              
+                            <a href="https://www.businesstimes.com.sg/life-culture/interactive-mobile-game-to-encourage-empathy-and-dismantle-stereotypes" target="_blank"><img src="images/media_bt.png" class="animate_bounce img-fluid"></a> 
                         </div>
                         <div class="col-sm-3">
-                            <a href="https://www.todayonline.com/commentary/are-we-game-enough-practise-empathy-1793241" target="_blank"><img src="images/media_today.png" class="animate_bounce img-fluid" style="max-height: 25px; mix-blend-mode: color;"></a>                              
+                            <a href="https://www.todayonline.com/commentary/are-we-game-enough-practise-empathy-1793241" target="_blank"><img src="images/media_today.png" class="animate_bounce img-fluid" style="max-height: 25px; mix-blend-mode: color;"></a> 
                         </div>
                         <div class="col-sm-3">
-                            <a href="https://better.sg/blog/2022/06/01/interview-lim-zi-kun-desiree-khng-tobeyou-sg-part-one-launching-a-successful-project/" target="_blank"><img src="images/betterwordlogo.png" class="animate_bounce img-fluid" style="max-height: 25px; filter: invert(1); mix-blend-mode: luminosity;"></a>                              
+                            <a href="https://better.sg/blog/2022/06/01/interview-lim-zi-kun-desiree-khng-tobeyou-sg-part-one-launching-a-successful-project/" target="_blank"><img src="images/betterwordlogo.png" class="animate_bounce img-fluid" style="max-height: 25px; filter: invert(1); mix-blend-mode: luminosity;"></a> 
                         </div>
                     </div>
                     <p class="text-center" style="margin-top: 25px; color: var(--aqua1);">For Media enquiries, please contact us using the link above.</p>
@@ -262,7 +266,7 @@ yellowshadow header_h1"> <span class="typewrite" data-period="2000" data-type='[
 /* background-image: url('images/trans_background_pattern.png') */">
                 <div class="container text-center">
                     <img src="images/endlogo.png" class="animate_bounce img-fluid">
-                    <h5 class="text-center text-white">ToBeYou.sg is a volunteer-run project  by better.sg, a techforgood charity in Singapore.</h5>
+                    <h5 class="text-center text-white">ToBeYou.sg is a volunteer-run project by better.sg, a techforgood charity in Singapore.</h5>
                     <div class="row">
                         <div class="col-2 offset-3"> 
                             <a href="faq.html"><p class="text-center" style="color: var(--tangerine);">GAME FAQ</p></a> 
@@ -287,14 +291,267 @@ yellowshadow header_h1"> <span class="typewrite" data-period="2000" data-type='[
                     </div>
                 </div>
             </div>
-            <!-- partial -->
-            <script src='https://assets.codepen.io/16327/gsap-latest-beta.min.js?r=v3.11.3'></script>
-            <script src='https://assets.codepen.io/16327/ScrollTrigger.min.js'></script>
-            <script src="./script.js"></script>
-            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-            <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-            <script>
+        </div>
+        <div data-pg-name="SmallScreens" id="small_container" class="container-snap-parent">
+            <nav class="nav sticky-top " style="height: 10vh !important; padding: 15px !important; align-items: center;">
+                <img src="images/logo.svg" class="header_bounce" height="50%"/>
+                <ul class="float-right nav" style="position:absolute; right:15px !important"> 
+                    <li class="nav-item"> 
+                        <a class="nav-link active" alt="Facilitators" href="https://facilitator.tobeyou.sg/"><i class="fa fa-users" aria-hidden="true"></i> </a> 
+                    </li>                     
+                    <li class="nav-item"> 
+                        <a class="nav-link" alt="About" href="about.html"><i class="fa fa-question-circle" aria-hidden="true"></i></a> 
+                    </li>
+                    <li class="nav-item"> 
+                        <a class="nav-link" href="https://form.typeform.com/to/UnNtHibn?typeform-medium=embed-snippet&typeform-welcome=0&typeform-source=tobeyou.sg"><i class="fa fa-envelope" aria-hidden="true"></i></a> 
+                    </li>                     
+                    <li class="nav-item"> 
+                        <a class="btn nav-link navbar_button" href="https://game.tobeyou.sg">Play</a> 
+                    </li>                     
+                </ul>
+            </nav>
+            <div class="header " data-pg-name="Header" id="header_section" style="
+/* border-bottom: 10px solid white */
+height: 90vh !important;">
+                <div class="fixed-bottom position-absolute text-center" style="z-index: 100; border-bottom: 10px solid white;">
+                    <img id="large_groupshot" src="images/group_shot3.png" class="img-fluid" width="100%"/>
+                </div>
+                <div class="align-items-center d-flex fixed-bottom  justify-content-center position-absolute" style="margin-left: auto; margin-right: auto; z-index: 10; top: 20vh !important;">
+                    <div class="animate_bounce header_circle" style="box-shadow: 0 0 20px #c5e83a;"></div>
+                </div>
+                <div class="container position-sticky text-center" style="z-index: 10000 !important; margin-top: 50px">
+                    <h3 class="yellowshadow" style="margin-bottom: 30px; color: #005b69;">An award-winning game about empathy</h3>
+                    <h2>What&apos;s it like to be...</h2>
+                    <h1 class="
+    yellowshadow header_h1"> <span class="typewrite" data-period="2000" data-type='[ "Aman", "Unaisah", "Zhihao", "Nadia","Ravi", "Marie", "You?" ]'> </span></h1>
+                    <a class="btn btn-large header_button" style="margin-top: 150px;" href="https://game.tobeyou.sg">Play</a>
+                </div>
+            </div>
+            <div id="quote_section" data-pg-name="BigQuote" style="border-bottom: 16px solid #ffffff;" class="container-snap small_section">
+                <div class="container" style="padding-top: 10%;">
+                    <p class="animate_appear quotetext">&ldquo;Through this platform, [the team] hopes to build empathy and promote mutual understanding between people of different races and religions.&rdquo;</p>
+                    <h4 class="text-center" style="color: #005b69; font-weight: 700; margin-top: 15px;">President Halimah Yacob</h4>
+                    <div class="row" style="margin-top: 100px;">
+                        <div class="animate_appear col-4 text-center">
+                            <h6 class="text-center">Funded by</h6>
+                            <img src="images/mccylogo.png" class="img-fluid"> 
+                        </div>
+                        <div class="animate_appear col-4 text-center">
+                            <h6 class="text-center">Partnership with</h6>
+                            <img src="images/onepeoplelogo.png" class="img-fluid" style="max-height: 100px;"> 
+                        </div>
+                        <div class="animate_appear col-4 text-center">
+                            <h6 class="text-center">Built by</h6>
+                            <img src="images/betterwordlogo.png" class="img-fluid"> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-snap d-flex small_section" id="video_section" data-pg-name="Video" style="background: var(--lapisdark); color: white; align-items: center;">
+                <div class="container" style="margin-top: 25px;">
+                    <div class="text-center">
+                        <h3 class="text-white">Experience life as another Singaporean</h3>
+                        <p>What if your race, gender, and other identities were something else? What would life be like? How would you deal with everyday situations and dilemmas? To Be You gives you a chance to experience it in a safe environment, at your own pace.</p>
+                        <p>Join over <b>5,000</b> players who have already had this experience - and loved it.</p>
+                    </div>
+                    <div class="row">
+                        <div id="large_screenshotcircle" class="col-8 offset-2"> 
+                            <img src="images/screenshotcircle.png" class="animate_bounce img-fluid"> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex" id="video_section" data-pg-name="Video" style="border-bottom: 10px solid #ffffff; background: var(--lapisdark); color: white; align-items: center;">
+                <div id="large_trailervideo" style="width: 100vw; height: 400px;"> 
+                    <iframe class="video" src="https://www.youtube.com/embed/2jdsiYvqs78" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;" allowfullscreen width="100%" height="100%"></iframe>
+                </div>
+            </div>
+            <div id="facilitator_section" data-pg-name="Facilitator" style="border-bottom: 10px solid #ffffff; background: var(--aqua2); color: white; align-items: center; background-image: url('images/trans_background_pattern.png');" class="container-snap small_section">
+                <div class="container">
+                    <div class="text-center" style="margin-top: 15px; margin-bottom: 15px;">
+                        <h5 class="text-white animate_appear">Facilitate powerful conversations about diversity and inclusion in classrooms, workplaces, and organisations.</h5>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4"> 
+                            <iframe class="facil_images video animate_bounce" src="https://www.youtube.com/embed/ueY980OH_j4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;" allowfullscreen width="100%" style="aspect-ratio: 16/9;"></iframe>
+                            <p>Easy-to-use dashboard that shows all the assigned games for all your classes</p> 
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <img src="images/facilitator_screen2.png" class="facil_images img-fluid animate_bounce">
+                            <p>Discuss in-game choices and reflections with your students or participants</p> 
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <img src="images/facilitator_screen3.jpg" class="facil_images img-fluid animate_bounce">
+                            <p>Professionally curated lesson plans and faciliation guide</p>
+                        </div>
+                    </div>
+                    <div class="text-center" style="margin-top: 15px; margin-bottom: 15px;">
+                        <h5 class="text-white animate_appear">Join top schools and organisations that have already used the free facilitation dashboard.</h5>
+                        <img src="images/facilitator_logos.png" class="animate_appear img-fluid" style="mix-blend-mode: screen;">
+                        <a class="btn btn-large header_button header_bounce" href="https://facilitator.tobeyou.sg" style="margin-top: 25px;">Facilitators</a>
+                    </div>
+                </div>
+            </div>
+            <div class="container-snap d-flex vh-100" id="slider_section" data-pg-name="CharSlider" style="border-bottom: 10px solid #ffffff; background-color: var(--aqua); color: white; align-items: center; background-image: url('images/trans_background_pattern.png');">
+                <div id="carousel1" class="carousel slide vh-100" data-ride="carousel"> 
+                    <div class="carousel-inner vh-100"> 
+                        <div class=" carousel-item active vh-100"> 
+                            <div class="d-flex large_ravi vh-100" style="color: white;">
+                                <div style="width: 100%; margin-top: 10vh;">
+                                    <h1 class="text-center small_character_h1">Ravi Kannasamy</h1>
+                                    <p class="large_character_storyline text-center">Ravi dreams of being an aviation engineer - but can he push past the stereotypes and doubts?</p>
+                                </div>
+                                <div style="width: 100%; position: absolute; bottom: 0px;" class="text-left">
+                                    <img src="images/ravi_side_characters.png" class="animate_appear img-fluid small_side_characters">
+                                </div>
+                                <div style="width: 100%; position: absolute; bottom: 0px;" class="text-center">
+                                    <img src="images/ravi_profile.png" class=" img-fluid small_main_character ">
+                                </div>
+                            </div>                             
+                        </div>                         
+                        <div class="carousel-item vh-100"> 
+                            <div class="d-flex large_nadia vh-100" style="color: white;">
+                                <div style="width: 100%; margin-top: 10vh;">
+                                    <h1 class="text-center small_character_h1">Nadia binte Rahim</h1>
+                                    <p class="large_character_storyline text-center">Nadia wants to survive JC and become a doctor - but will self-doubt and young love get in the way?</p>
+                                </div>
+                                <div style="width: 100%; position: absolute; bottom: 0px;" class="text-left">
+                                    <img src="images/nadia_side_characters.png" class="img-fluid small_side_characters">
+                                </div>
+                                <div style="width: 100%; position: absolute; bottom: 0px;" class="text-center">
+                                    <img src="images/nadia_profile.png" class=" img-fluid small_main_character">
+                                </div>
+                            </div>                             
+                        </div>                         
+                        <div class="carousel-item vh-100"> 
+                            <div class="d-flex large_aman vh-100" style="color: white;">
+                                <div style="width: 100%; margin-top: 10vh;">
+                                    <h1 class="text-center small_character_h1">Aman Singh</h1>
+                                    <p class="large_character_storyline text-center">National Service, family expectations, personal dreams, or faith - must he give up something he values to succeed?</p>
+                                </div>
+                                <div style="width: 100%; position: absolute; bottom: 0px;" class="text-left">
+                                    <img src="images/aman_side_characters.png" class="img-fluid small_side_characters">
+                                </div>
+                                <div style="width: 100%; position: absolute; bottom: 0px;" class="text-center">
+                                    <img src="images/aman_profile.png" class=" img-fluid small_main_character">
+                                </div>
+                            </div>                             
+                        </div>
+                        <div class="carousel-item vh-100"> 
+                            <div class="d-flex large_zhihao vh-100" style="color: white;">
+                                <div style="width: 100%; margin-top: 10vh;">
+                                    <h1 class="text-center small_character_h1">Zhihao <br/> Lim</h1>
+                                    <p class="large_character_storyline text-center">Zhihao's future in e-sports and his friendship are in danger because of one angry tweet. Can he recover both?</p>
+                                </div>
+                                <div style="width: 100%; position: absolute; bottom: 0px;" class="text-left">
+                                    <img src="images/zhihao_side_characters.png" class="img-fluid small_side_characters">
+                                </div>
+                                <div style="width: 100%; position: absolute; bottom: 0px;" class="text-center">
+                                    <img src="images/zhihao_profile.png" class=" img-fluid small_main_character">
+                                </div>
+                            </div>                             
+                        </div>
+                        <div class="carousel-item vh-100"> 
+                            <div class="d-flex large_unaisah vh-100" style="color: white;">
+                                <div style="width: 100%; margin-top: 10vh;">
+                                    <h1 class="text-center small_character_h1">Unaisah Begum</h1>
+                                    <p class="large_character_storyline text-center">Unaisah wants to excel as a new teacher - but can she break the glass ceiling while dealing with things at home?</p>
+                                </div>
+                                <div style="width: 100%; position: absolute; bottom: 0px;" class="text-left">
+                                    <img src="images/unaisah_side_characters.png" class="img-fluid small_side_characters">
+                                </div>
+                                <div style="width: 100%; position: absolute; bottom: 0px;" class="text-center">
+                                    <img src="images/unaisah_profile.png" class=" img-fluid small_main_character">
+                                </div>
+                            </div>                             
+                        </div>
+                        <div class="carousel-item vh-100"> 
+                            <div class="d-flex large_marie vh-100" style="color: white;">
+                                <div style="width: 100%; margin-top: 10vh;">
+                                    <h1 class="text-center small_character_h1">Marie da Costa</h1>
+                                    <p class="large_character_storyline text-center">Marie wants to open her own cafe - but will her heritage and gender stand in the way of her success?</p>
+                                </div>
+                                <div style="width: 100%; position: absolute; bottom: 0px;" class="text-left">
+                                    <img src="images/marie_side_characters.png" class="img-fluid small_side_characters">
+                                </div>
+                                <div style="width: 100%; position: absolute; bottom: 0px;" class="text-center">
+                                    <img src="images/marie_profile.png" class=" img-fluid small_main_character">
+                                </div>
+                            </div>                             
+                        </div>                         
+                    </div>                     
+                    <a class="carousel-control-prev" href="#carousel1" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a> 
+                    <a class="carousel-control-next" href="#carousel1" role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only">Next</span> </a> 
+                </div>
+            </div>
+            <div class="container-snap d-flex small_section" id="feedback_section" data-pg-name="Feedback" style="border-bottom: 10px solid #ffffff; background-color: var(--midnight100); color: white; align-items: center; background-image: url('images/trans_background_pattern.png');">
+                <div class="container">
+                    <h5 class="text-center text-white">Thousands of players have left heart-felt reflections.</h5>
+                    <div class="row">
+                        <div class="col-sm-4"> 
+                            <p class="animate_appear" style="color: var(--aqua1);">&ldquo;I like that i can read Nadia&apos;s thoughts in the game, really puts me in her shoes. Obviously a lot of thought has been put in by the developers. Interesting game.&rdquo;</p> 
+                        </div>
+                        <div class="col-sm-4"> 
+                            <p class="animate_appear" style="color: var(--aqua1);">&ldquo;I think it helps us be more self-aware of how the comments/joke we made that could&apos;ve been seen as inconsequential will hurt others, also to hold ourselves back before making such remark on other&apos;s expense&rdquo;</p> 
+                        </div>
+                        <div class="col-sm-4"> 
+                            <p class="animate_appear" style="color: var(--aqua1);">&quot;Well done! I&apos;m slightly disappointed that this hasn&apos;t been played by more people. If it were made compulsory for all Secondary School students, I believe that the next generation will most definitely churn out fine youths and young adults who truly understand the meaning of respect.&quot;</p> 
+                        </div>
+                    </div>
+                    <h5 class="text-center text-white" style="margin-top: 25px;">Media features</h5>
+                    <div class="row text-center">
+                        <div class="col-sm-3">
+                            <a href="https://www.straitstimes.com/life/stay-home-guide-for-monday-build-empathy-with-free-online-game-decorate-hdb-corridor-for" target="_blank"><img src="images/media_st.png" class="animate_bounce img-fluid"></a> 
+                        </div>
+                        <div class="col-sm-3">
+                            <a href="https://www.businesstimes.com.sg/life-culture/interactive-mobile-game-to-encourage-empathy-and-dismantle-stereotypes" target="_blank"><img src="images/media_bt.png" class="animate_bounce img-fluid"></a> 
+                        </div>
+                        <div class="col-sm-3">
+                            <a href="https://www.todayonline.com/commentary/are-we-game-enough-practise-empathy-1793241" target="_blank"><img src="images/media_today.png" class="animate_bounce img-fluid" style="max-height: 25px; mix-blend-mode: color;"></a> 
+                        </div>
+                        <div class="col-sm-3">
+                            <a href="https://better.sg/blog/2022/06/01/interview-lim-zi-kun-desiree-khng-tobeyou-sg-part-one-launching-a-successful-project/" target="_blank"><img src="images/betterwordlogo.png" class="animate_bounce img-fluid" style="max-height: 25px; filter: invert(1); mix-blend-mode: luminosity;"></a> 
+                        </div>
+                    </div>
+                    <p class="text-center" style="margin-top: 25px; color: var(--aqua1);">For Media enquiries, please contact us using the link above.</p>
+                </div>
+            </div>
+            <div class="container-snap d-flex vh-100" id="footer_section" data-pg-name="Footer" style="border-bottom: 10px solid #ffffff; background-color: var(--midnight-dark2); color: white; align-items: center;">
+                <div class="container text-center">
+                    <img src="images/endlogo.png" class="animate_bounce img-fluid">
+                    <h5 class="text-center text-white">ToBeYou.sg is a volunteer-run project by better.sg, a techforgood charity in Singapore.</h5>
+                    <div class="row">
+                        <div class="col-3 offset-1"> 
+                            <a href="faq.html"><p class="text-center" style="color: var(--tangerine);">GAME FAQ</p></a> 
+                        </div>
+                        <div class="col-3">
+                            <a href="privacy.html"><p class="text-center" style="color: var(--tangerine);">PRIVACY POLICY</p></a>
+                        </div>
+                        <div class="col-3">
+                            <a href="https://form.typeform.com/to/UnNtHibn?typeform-medium=embed-snippet&typeform-welcome=0&typeform-source=tobeyou.sg"><p class="text-center" style="color: var(--tangerine);">CONTACT</p></a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3 offset-1"> 
+                            <a href="https://www.facebook.com/ToBeYou.SG"><i class="fa-facebook fab"></i></a> 
+                        </div>
+                        <div class="col-3">
+                            <a href="https://www.instagram.com/tobeyou.sg/"><i class="fa-instagram fab"></i></a>
+                        </div>
+                        <div class="col-3">
+                            <a href="https://discord.gg/bjenhVbPwq"><i class="fa-discord fab"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src='https://assets.codepen.io/16327/gsap-latest-beta.min.js?r=v3.11.3'></script>
+        <script src='https://assets.codepen.io/16327/ScrollTrigger.min.js'></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <script src="./script.js"></script>
+        <script>
              
             var TxtType = function(el, toRotate, period) {
                 this.toRotate = toRotate;
@@ -352,6 +609,16 @@ yellowshadow header_h1"> <span class="typewrite" data-period="2000" data-type='[
                 css.innerHTML = ".typewrite > .wrap { border-right: 0.02em solid #fff}";
                 document.body.appendChild(css);
             };
+            
             </script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-6C8ELYHGWW"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-6C8ELYHGWW');
+        </script>         
     </body>
 </html>

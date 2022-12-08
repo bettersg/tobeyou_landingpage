@@ -161,6 +161,8 @@ gsap.utils.toArray(".animate_appear").forEach(function (item) {
 
 })
 
+
+
 gsap.fromTo(
   ".header_bounce",
   { scale: 0.5, transformOrigin: "50% 100%" },
@@ -185,3 +187,19 @@ function showVideo() {
 	
 };
 
+
+
+
+const small_main_char = document.querySelectorAll(".small_main_character");
+
+// Animation on load:
+gsap.fromTo(small_main_char[0],{ scale: 0.8, opacity: 0, transformOrigin: "50% 100%" },{ scale: 1, opacity: 1, delay: 0.5, duration: 3, ease: "elastic" })
+console.log('0 fired', small_main_char);
+// const duration = 3000;
+
+
+
+$("#carousel1").on('slide.bs.carousel', function () {
+	gsap.fromTo(small_main_char, { scale: 0.8, opacity: 0, transformOrigin: "50% 100%" }, { scale: 1, opacity: 1, delay: 0.5, duration: 3, ease: "elastic" })
+	
+});
