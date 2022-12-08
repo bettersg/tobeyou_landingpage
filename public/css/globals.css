@@ -31,12 +31,6 @@
   pointer-events: auto;
 }
 
-.valign-text-middle {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
 .hidden,
 .hidden * {
   pointer-events: none;
