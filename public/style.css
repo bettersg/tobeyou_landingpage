@@ -415,7 +415,8 @@ p {
 		background-repeat: repeat ;
 		background-position: left top;
 		position: relative;
-
+		background: url(images/header_background.jpg);
+		background-size: cover;
 		/* background: #3dcad3 */
 
 	}
@@ -648,7 +649,7 @@ p {
 
 		font-family: 'Inter', sans-serif;
 		text-transform: uppercase;
-		font-weight: 900;
+		font-weight: 700;
 		color: #ffffff !important;
 		margin-left: 20px;
 
@@ -739,7 +740,10 @@ p {
 	.header_button {
 
 		color: var(--aqua2) !important;
-		background-color: #ffffff;
+		background-color: rgba(255,255,255,0.8);
+		border: 1px solid white;
+		padding-left: 50px;
+		padding-right: 50px;
 
 	}
 
@@ -998,7 +1002,7 @@ p {
 
 		font-family: 'Inter', sans-serif;
 		text-transform: uppercase;
-		font-weight: 900;
+		font-weight: 700;
 		color: #ffffff !important;
 		margin-left: 20px;
 
@@ -1078,7 +1082,10 @@ p {
 	.header_button {
 
 		color: var(--aqua2) !important;
-		background-color: #ffffff;
+		background-color: rgba(255,255,255,0.8);
+		border: 1px solid white;
+		padding-left: 50px;
+		padding-right: 50px;
 
 	}
 
