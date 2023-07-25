@@ -903,4 +903,7 @@ h3 {
 hide-on-med-and-up {
 
 }
-  
+
+ul.team-text {
+    line-height: 1.5;
+}
